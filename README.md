@@ -1,41 +1,9 @@
 # @sierra-95/svelte-ui
-
-A component library built for the **Svelte** ecosystem.  
-It offers expressive, accessible, and flexible components to accelerate your Svelte projects.
-
-
-## Getting Started
-
-Install via npm:
-
-```bash
-
-  npm i @sierra-95/svelte-ui
-
-```
-## Scripts
-Add this in your app.html or svelte:head
-```html
-  <script
-    src="https://kit.fontawesome.com/b63be7ac2d.js"
-    crossorigin="anonymous"
-  ></script>
-```
-## Usage Example
-
-After installation, import and use any component you need.
-For example, to add a button:
-
-```html
-  <script>
-    import { Button } from '@sierra-95/svelte-ui';
-  </script>
-
-  <Button onclick={() => alert('Button clicked!')}>
-    Click Me
-  </Button>
-```
+[![Alt text](https://files.michaelmachohi.com/logos/michaelmachohi.favicon.png)](https://michaelmachohi.com)
+[![npm version](https://img.shields.io/npm/v/@sierra-95/svelte-ui.svg)](https://www.npmjs.com/package/@sierra-95/svelte-ui)
+[![npm downloads](https://img.shields.io/npm/dm/@sierra-95/svelte-ui.svg)](https://www.npmjs.com/package/@sierra-95/svelte-ui)
+[![CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 ## Documentation
+Full documentation: [https://svelte.michaelmachohi.com](https://svelte.michaelmachohi.com)
 
-Full documentation and component demos are available at [https://svelte.michaelmachohi.com](https://svelte.michaelmachohi.com)
