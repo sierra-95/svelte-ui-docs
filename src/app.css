@@ -1,2 +1,31 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+
+h1{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+h2{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.note{
+    color: var(--note);
+    text-decoration: underline;
+}
+
+:root{
+    --shiki-light-bg: #f8fafc;
+    --shiki-dark-bg: var(--dark-Theme);
+    --note-light: #1E66F5;
+    --note-dark: #79AFFF;
+}
+body, body[data-theme='light'] {
+    --shiki-bg: var(--shiki-light-bg);
+    --note: var(--note-light);
+}
+
+body[data-theme='dark']{
+    --shiki-bg: var(--shiki-dark-bg);
+    --note: var(--note-dark);
+}

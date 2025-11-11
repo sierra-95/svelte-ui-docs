@@ -1,0 +1,4 @@
+th, td{
+    color: var(--text);
+    border: 1px solid var(--border);
+}
