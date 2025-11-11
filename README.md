@@ -1,38 +1,41 @@
-# sv
+# @sierra-95/svelte-ui
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A component library built for the **Svelte** ecosystem.  
+It offers expressive, accessible, and flexible components to accelerate your Svelte projects.
 
-## Creating a project
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Getting Started
 
-```sh
-# create a new project in the current directory
-npx sv create
+Install via npm:
 
-# create a new project in my-app
-npx sv create my-app
+```bash
+
+  npm i @sierra-95/svelte-ui
+
+```
+## Scripts
+Add this in your app.html or svelte:head
+```html
+  <script
+    src="https://kit.fontawesome.com/b63be7ac2d.js"
+    crossorigin="anonymous"
+  ></script>
+```
+## Usage Example
+
+After installation, import and use any component you need.
+For example, to add a button:
+
+```html
+  <script>
+    import { Button } from '@sierra-95/svelte-ui';
+  </script>
+
+  <Button onclick={() => alert('Button clicked!')}>
+    Click Me
+  </Button>
 ```
 
-## Developing
+## Documentation
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Full documentation and component demos are available at [https://svelte.michaelmachohi.com](https://svelte.michaelmachohi.com)
