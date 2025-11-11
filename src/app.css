@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import '@sierra-95/svelte-ui/global.css';
 @plugin '@tailwindcss/typography';
 
 :root{

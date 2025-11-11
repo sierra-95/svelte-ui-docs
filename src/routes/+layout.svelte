@@ -1,6 +1,5 @@
 <script lang="ts">
 	import '../app.css';
-	import '@sierra-95/svelte-ui/global.css';
 	import {Layout, ButtonTheme} from '@sierra-95/svelte-ui';
 	import {sections} from '$lib';
 
