@@ -17,7 +17,7 @@
     npm i @sierra-95/svelte-ui    
   `}/>
 
-  <h3>Add this in your <strong>app.html</strong> or <strong>svelte:head</strong></h3>
+  <h3>Add this in your <strong>app.html</strong></h3>
   <RenderCode
       lang="html"
       code={`
@@ -26,6 +26,13 @@
         crossorigin="anonymous"
       ></script>
   `}/>
+  <h3>Add this in your <strong>app.css</strong></h3>
+  <RenderCode
+      lang="css"
+      code={`
+      @import '@sierra-95/svelte-ui/global.css';
+  `}/>
+  <h3>And thats it!</h3>
   <h2>Usage Example</h2>
   <h3>After installation, import any component you want to use. For example, to add a button:</h3>
   <RenderCode
