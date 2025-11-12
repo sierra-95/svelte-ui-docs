@@ -35,7 +35,7 @@
 		"vitest-browser-svelte": "^2.0.1"
 	},
 	"dependencies": {
-		"@sierra-95/svelte-ui": "^2.9.2",
+		"@sierra-95/svelte-ui": "^2.9.3",
 		"shiki": "^3.15.0"
 	}
 }

@@ -22,10 +22,10 @@
 			import { Input } from '@sierra-95/svelte-ui';
 			let email = '';
 		<\/script>
-
+		<!-- type: default=text, options: text, number, email, tel, url  etc-->
 		<Input 
 			id="email" 
-			type="email" 
+			type="email"
 			label="Email Address" 
 			placeholder="Enter your email"
 			value={email} 
