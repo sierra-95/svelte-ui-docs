@@ -3,7 +3,7 @@
 	import {Button} from '@sierra-95/svelte-ui'
 	import {RenderCode} from '$lib';
     function navigate(){
-        goto('/maintenance/example');
+        goto('maintenance/example');
     }
 </script>
 
