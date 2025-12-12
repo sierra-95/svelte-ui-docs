@@ -1,7 +1,9 @@
 <script>
     import { onMount, onDestroy } from 'svelte';
     import {setDispatchMessage,clearDispatchMessage, Button} from '@sierra-95/svelte-ui'
-    import {RenderCode, DispatchTable} from '$lib';
+    import {RenderCode} from '$lib';
+    import DispatchTable from '../_table/dispatch.svelte';
+   
     onMount(() => {
         setDispatchMessage(
             'error', 

@@ -1,6 +1,9 @@
 <script lang="ts">
 	import {Button, ButtonFlip, ButtonMarquee, ButtonSwipe} from '@sierra-95/svelte-ui'
-	import {RenderCode, ButtonDefaultTable, ButtonCustomTable} from '$lib';
+	import {RenderCode} from '$lib';
+	import ButtonCustom from './_tables/buttonCustom.svelte';
+	import ButtonDefault from './_tables/buttonDefault.svelte';
+
 	const contained_buttons = [
 		{ color: 'primary', title: 'Primary contained' },
 		{ color: 'warning', title: 'Warning contained' },
@@ -99,7 +102,7 @@
     `}/>
 
 	<h2>Default Buttons Table</h2>
-	<div class='overflow-x-auto'><ButtonDefaultTable/></div>
+	<div class='overflow-x-auto'><ButtonDefault/></div>
 	<h2>Custom Buttons Table</h2>
-	<div class='overflow-x-auto'><ButtonCustomTable/></div>
+	<div class='overflow-x-auto'><ButtonCustom/></div>
 </main>

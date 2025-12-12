@@ -1,6 +1,8 @@
 <script>
     import {UserMenu, MenuItem} from '@sierra-95/svelte-ui'
-	import {RenderCode, UserMenuTable} from '$lib';
+	import {RenderCode} from '$lib';
+    import UserMenuTable from './_table/userMenu.svelte';
+
     let open = $state(true);
 
     let user = $state({

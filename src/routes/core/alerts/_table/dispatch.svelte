@@ -1,6 +1,3 @@
-<script>
-  import './styles.css';
-</script>
 <table class="table-auto w-full text-sm text-left">
   <thead class="text-xs uppercase">
     <tr>

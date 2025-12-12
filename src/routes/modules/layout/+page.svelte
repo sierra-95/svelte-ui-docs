@@ -5,9 +5,11 @@
 <main class="space-y-4">
 	<title>Layout Menu</title>
 	<h1>Layout Menu</h1>
-	<h3>The layout menu is a prebuilt interface with a header, a menu, and an application entry point.
+	<h3>The layout menu is a prebuilt interface with header, menu, application entry point and theme support.
         It’s designed to save developers time on setup so they can focus on real development work.
     </h3>
+    <img src="https://files.michaelmachohi.com/svelte-ui/light-theme-layout.png" alt="Light Theme Layout" />
+    <img src="https://files.michaelmachohi.com/svelte-ui/dark-theme-layout.png" alt="Dark Theme Layout" />
 	<h2>Getting Started</h2>
     <h3>Define a sections file. The contents will be mapped to the Layout Menu.</h3>
 	<ol class="list-decimal list-inside space-y-2">

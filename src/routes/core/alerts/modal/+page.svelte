@@ -1,6 +1,7 @@
 <script>
     import {modalStore,Button} from '@sierra-95/svelte-ui';
-    import {RenderCode, ModalTable} from '$lib';
+    import {RenderCode} from '$lib';
+    import ModalTable from '../_table/modal.svelte';
 
     function triggerModal() {
         modalStore.set({

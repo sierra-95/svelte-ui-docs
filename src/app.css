@@ -28,7 +28,10 @@ h2{
     font-weight: bold;
     font-size: 1.2rem;
 }
-
+th, td{
+    color: var(--text);
+    border: 1px solid var(--border);
+}
 /*Dont use from h3*/
 .note{
     color: var(--note);

@@ -100,7 +100,7 @@ export const sections = [
             { 
                 path: routes.layout_menu, 
                 label: 'Layout',
-                icon: 'fa fa-bars' ,
+                icon: 'fa fa-rocket' ,
             },
         ]
     },
