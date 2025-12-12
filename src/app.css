@@ -28,6 +28,8 @@ h2{
     font-weight: bold;
     font-size: 1.2rem;
 }
+
+/*Dont use from h3*/
 .note{
     color: var(--note);
     text-decoration: underline;

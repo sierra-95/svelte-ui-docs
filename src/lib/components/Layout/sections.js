@@ -1,26 +1,31 @@
-const buttons = `/button`;
+const core = `/core`;
+const modules = `/modules`;
 const stores = `/stores`;
-const menus = `/menus`;
-const alerts = `/alerts`;
+
+const alerts = `${core}/alerts`;
 
 export const routes = {
     installation: '/',
-    // Buttons
-    default_button: `${buttons}/default`,
-    custom_button: `${buttons}/custom`,
-    //menus
-    layout_menu: `${menus}/layout`,
-    user_menu: `${menus}/user`,
-    //stores
-    general_stores: `${stores}/general`,
-    theme_stores: `${stores}/theme`,
-    //alerts
+    
+    // ################Core################
+
+    buttons: `${core}/buttons`,
+    progress: `${core}/progress`,
+    inputs: `${core}/inputs`,
+    Menus: `${core}/menus`,
+
     modal: `${alerts}/modal`,
     dispatch: `${alerts}/dispatch`,
     maintenance: `${alerts}/maintenance`,
-    //others
-    progress: `/progress`,
-    inputs: `/inputs`,
+
+
+    // ################Modules################    
+    layout_menu: `${modules}/layout`,
+    user_menu: `${modules}/user`,
+
+    // ################Stores################ 
+    general_stores: `${stores}/general`,
+    theme_stores: `${stores}/theme`,
 };
 
 export const sections = [
@@ -35,67 +40,37 @@ export const sections = [
         ]
     },
     {
-        label: 'Buttons',
+        label: 'Core',
         items: [
             { 
-                path: routes.default_button, 
-                label: 'Default', 
+                path: routes.buttons, 
+                label: 'Buttons', 
                 icon: 'fa fa-toggle-off',
             },
-            { 
-                path: routes.custom_button,
-                label: 'Custom', 
-                icon: 'fa fa-toggle-on',
-            }
-        ]
-    },
-    {
-        label: 'Progress',
-        items: [
-            { 
-                path: routes.progress,
-                label: 'Progress', 
-                icon: 'fa fa-spinner',
-            },
-        ]
-    },
-    {
-        label: 'Inputs',
-        items: [
-            { 
-                path: routes.inputs, 
-                label: 'Inputs', 
-                icon: 'fa fa-keyboard-o',
-            }
-        ]
-    },
-    {
-        label: 'Menus',
-        items: [
-            { 
-                path: routes.layout_menu, 
-                label: 'Layout',
-                icon: 'fa fa-bars' ,
-            },
-            { 
-                path: routes.user_menu, 
-                label: 'User',
-                icon: 'fa fa-user' ,
-            },
-        ]
-    },
-    {
-        label: 'Alerts',
-        items: [
             { 
                 path: routes.dispatch, 
                 label: 'Dispatch',
                 icon: 'fa fa-commenting' ,
             },
             { 
+                path: routes.inputs, 
+                label: 'Inputs', 
+                icon: 'fa fa-keyboard-o',
+            },
+            { 
+                path: routes.Menus, 
+                label: 'Menus',
+                icon: 'fa fa-bars' ,
+            },
+            { 
                 path: routes.modal, 
                 label: 'Modal',
                 icon: 'fa fa-exclamation-triangle' ,
+            },
+            { 
+                path: routes.progress,
+                label: 'Progress', 
+                icon: 'fa fa-spinner',
             },
             { 
                 path: routes.maintenance, 
@@ -116,6 +91,16 @@ export const sections = [
                 path: routes.theme_stores, 
                 label: 'Theme',
                 icon: 'fa fa-moon-o' ,
+            },
+        ]
+    },
+    {
+        label: 'Modules',
+        items: [
+            { 
+                path: routes.layout_menu, 
+                label: 'Layout',
+                icon: 'fa fa-bars' ,
             },
         ]
     },
