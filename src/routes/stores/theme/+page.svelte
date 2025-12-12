@@ -1,13 +1,13 @@
 <script>
     import {ButtonTheme} from '@sierra-95/svelte-ui';
-    import {RenderCode} from '$lib';
+    import {RenderCode, routes} from '$lib';
 </script>
 
 <main class="space-y-4">
 	<title>Theme Store</title>
 	<h1>Theme Store</h1>
 	<h3>The theme store is tightly integrated with the 
-        <a href='/menus/layout' class="note">Layout component</a> 
+        <a href={routes.layout} class="note">Layout component</a> 
         and internal body styling.
     </h3>
     <RenderCode

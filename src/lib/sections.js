@@ -20,7 +20,7 @@ export const routes = {
 
 
     // ################Modules################    
-    layout_menu: `${modules}/layout`,
+    layout: `${modules}/layout`,
     user_menu: `${modules}/user`,
 
     // ################Stores################ 
@@ -98,7 +98,7 @@ export const sections = [
         label: 'Modules',
         items: [
             { 
-                path: routes.layout_menu, 
+                path: routes.layout, 
                 label: 'Layout',
                 icon: 'fa fa-rocket' ,
             },
