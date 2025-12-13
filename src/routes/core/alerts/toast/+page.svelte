@@ -1,11 +1,11 @@
 <script>
     import { onMount, onDestroy } from 'svelte';
-    import {setDispatchMessage,clearDispatchMessage, Button} from '@sierra-95/svelte-ui'
+    import {setToastMessage,clearToastMessage, Button} from '@sierra-95/svelte-ui'
     import {RenderCode} from '$lib';
-    import DispatchTable from '../_table/dispatch.svelte';
+    import ToastTable from '../_table/toast.svelte';
    
     onMount(() => {
-        setDispatchMessage(
+        setToastMessage(
             'error', 
             'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.', 
             6000, 
@@ -13,64 +13,64 @@
         );
     });
     onDestroy(() => {
-        clearDispatchMessage();
+        clearToastMessage();
     });
-    function triggerDispatch(){
-        setDispatchMessage('success', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.');
+    function triggerToast(){
+        setToastMessage('success', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.');
     }
 </script>
 
 <main class="space-y-4">
-    <title>Dispatch</title>
-    <h1>Dispatch</h1>
-    <Button onclick={triggerDispatch}>Click here</Button>
+    <title>Toast</title>
+    <h1>Toast</h1>
+    <Button onclick={triggerToast}>Click here</Button>
     <h3>Place this anywhere in your app</h3>
     <RenderCode
         lang="svelte"
         code={`
         <\script>
-            import { Dispatch } from '@sierra-95/svelte-ui';
+            import { Toast } from '@sierra-95/svelte-ui';
         <\/script>
 
-        <Dispatch />
+        <Toast />
 
     `}/>
-    <h2>Timed message dispatch</h2>
+    <h2>Timed message toast</h2>
     <h3>Default timeout is <strong>6 seconds</strong></h3>
     <RenderCode
         lang="svelte"
         code={`
         <\script>
-            import {setDispatchMessage, Button} from '@sierra-95/svelte-ui';
+            import {setToastMessage, Button} from '@sierra-95/svelte-ui';
 
-            function triggerDispatch(){
-                setDispatchMessage('success', 'Dispatch Triggered');
+            function triggerToast(){
+                setToastMessage('success', 'Toast Triggered');
             }
         <\/script>
 
-        <Button onclick={triggerDispatch}>Click here</Button>
+        <Button onclick={triggerToast}>Click here</Button>
 
     `}/>
 
-    <h2>Persistent message dispatch</h2>
+    <h2>Persistent message toast</h2>
     <RenderCode
         lang="svelte"
         code={`
         <\script>
             import { onMount, onDestroy } from 'svelte';
-            import {setDispatchMessage,clearDispatchMessage} from '@sierra-95/svelte-ui';
+            import {setToastMessage,clearToastMessage} from '@sierra-95/svelte-ui';
 
-            setDispatchMessage(
+            setToastMessage(
                 'success', 
                 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.', 
                 6000, 
                 true
             );
             onDestroy(() => {
-                clearDispatchMessage();
+                clearToastMessage();
             });
         <\/script>
 
     `}/>
-    <DispatchTable />
+    <ToastTable />
 </main>

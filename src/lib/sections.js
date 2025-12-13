@@ -15,7 +15,7 @@ export const routes = {
     Menus: `${core}/menus`,
 
     modal: `${alerts}/modal`,
-    dispatch: `${alerts}/dispatch`,
+    toast: `${alerts}/toast`,
     maintenance: `${alerts}/maintenance`,
 
 
@@ -48,11 +48,6 @@ export const sections = [
                 icon: 'fa fa-toggle-off',
             },
             { 
-                path: routes.dispatch, 
-                label: 'Dispatch',
-                icon: 'fa fa-commenting' ,
-            },
-            { 
                 path: routes.inputs, 
                 label: 'Inputs', 
                 icon: 'fa fa-keyboard-o',
@@ -76,7 +71,12 @@ export const sections = [
                 path: routes.maintenance, 
                 label: 'Site Under Maintenance',
                 icon: 'fa fa-firefox' ,
-            }
+            },
+            { 
+                path: routes.toast, 
+                label: 'Toast',
+                icon: 'fa fa-info-circle' ,
+            },
         ]
     },
     {
