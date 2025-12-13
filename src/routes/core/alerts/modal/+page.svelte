@@ -20,7 +20,7 @@
     <title>Alert Modal</title>
     <h1>Alert Modal</h1>
     <Button onclick={triggerModal}>Click to test</Button>
-    <h1>Getting Started</h1>
+    <h2>Getting Started</h2>
     <h3>Place this anywhere in your app</h3>
     <RenderCode
         lang="svelte"
