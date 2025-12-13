@@ -17,9 +17,13 @@
 </script>
 
 <main class="space-y-4">
-    <title>Modal</title>
-    <h1 class="font-bold text-2xl">Alert Modal</h1>
-    <Button onclick={triggerModal}>Click here</Button>
+    <title>Alert Modal</title>
+    <h1>Plain Modal</h1>
+    <Button onclick={triggerModal}>Click to test</Button>
+    <img src="https://files.michaelmachohi.com/svelte-ui/modal-plain.png" alt="Plain Modal Example"/>
+    <h1>Dynamic Modal</h1>
+    <img src="https://files.michaelmachohi.com/svelte-ui/modal-input.png" alt="Input Modal Example"/>
+    <h1>Getting Started</h1>
     <h3>Place this anywhere in your app</h3>
     <RenderCode
         lang="svelte"
@@ -31,7 +35,7 @@
         <Modal />
 
     `}/>
-    <h3>Trigger the Modal. Note that <strong>onCancel()</strong> is optional</h3>
+    <h2>Plain Modal</h2>
     <RenderCode
         lang="svelte"
         code={`
@@ -54,5 +58,32 @@
         <Button onclick={triggerModal}>Click here</Button>
 
     `}/>
+    <h2>Dynamic Modal</h2>
+    <RenderCode
+        lang="svelte"
+        code={`
+        <\script>
+            import { modalStore, Button, Input } from '@sierra-95/svelte-ui';
+
+            let value = '';
+            function triggerModal() {
+                modalStore.update(m => ({
+                    ...m,
+                    open: true,
+                    title: 'Editor',
+                    onConfirm: () => {alert('Modal confirmed!')},
+                    onCancel: () => alert('Modal cancelled!'),
+                    render: formContent
+                }));
+            }
+        <\/script>
+        {#snippet formContent()}
+            <Input label="Enter Youtube URL" id="youtube-url" bind:value={value}/>
+        {/snippet}
+        <Button onclick={triggerModal}>Click here</Button>
+
+    `}/>
+
+    <h3>Use <code class="note">modalStore.update()</code> for optional properties to keep defaults</h3>
     <ModalTable />
 </main>

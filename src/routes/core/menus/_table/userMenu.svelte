@@ -27,10 +27,16 @@
       <td class="p-3 border">Background color of the icons.</td>
     </tr>
     <tr>
-      <td class="p-3 border font-mono">absolute</td>
+      <td class="p-3 border font-mono">top</td>
       <td class="p-3 border font-mono">string</td>
-      <td class="p-3 border font-mono">left</td>
-      <td class="p-3 border">Dropdown position relative to the parent element.</td>
+      <td class="p-3 border font-mono">150%</td>
+      <td class="p-3 border">Absolute top position</td>
+    </tr>
+    <tr>
+      <td class="p-3 border font-mono">width</td>
+      <td class="p-3 border font-mono">string</td>
+      <td class="p-3 border font-mono">300px</td>
+      <td class="p-3 border">Width of the Menu</td>
     </tr>
   </tbody>
 </table>

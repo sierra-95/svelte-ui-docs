@@ -13,7 +13,7 @@
 		type="email" 
 		label="Email Address" 
 		placeholder="Enter your email"
-		value={email} 
+		bind:value={email}
 	/>
 	<RenderCode
 		lang="svelte"
@@ -22,13 +22,14 @@
 			import { Input } from '@sierra-95/svelte-ui';
 			let email = '';
 		<\/script>
+		<!-- id == name == label_for -->
 		<!-- type: default=text, options: text, number, email, tel, url  etc-->
 		<Input 
 			id="email" 
-			type="email"
+			type="email" 
 			label="Email Address" 
 			placeholder="Enter your email"
-			value={email} 
+			bind:value={email}
 		/>
 		
 	`}/>
@@ -36,7 +37,7 @@
 		id="password" 
 		label="Password" 
 		placeholder="Enter your password"
-		value={password} 
+		bind:value={password} 
 	/>
 	<RenderCode
 		lang="svelte"
@@ -46,11 +47,12 @@
 			let password = '';
 		<\/script>
 
+		<!-- id == name == label_for -->
 		<PasswordInput
 			id="password" 
 			label="Password" 
 			placeholder="Enter your password"
-			value={password} 
+			bind:value={password} 
 		/>
 		
 	`}/>
