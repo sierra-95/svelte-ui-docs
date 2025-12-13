@@ -18,11 +18,8 @@
 
 <main class="space-y-4">
     <title>Alert Modal</title>
-    <h1>Plain Modal</h1>
+    <h1>Alert Modal</h1>
     <Button onclick={triggerModal}>Click to test</Button>
-    <img src="https://files.michaelmachohi.com/svelte-ui/modal-plain.png" alt="Plain Modal Example"/>
-    <h1>Dynamic Modal</h1>
-    <img src="https://files.michaelmachohi.com/svelte-ui/modal-input.png" alt="Input Modal Example"/>
     <h1>Getting Started</h1>
     <h3>Place this anywhere in your app</h3>
     <RenderCode
@@ -36,6 +33,7 @@
 
     `}/>
     <h2>Plain Modal</h2>
+    <img src="https://files.michaelmachohi.com/svelte-ui/modal-plain.png" alt="Plain Modal Example"/>
     <RenderCode
         lang="svelte"
         code={`
@@ -59,6 +57,8 @@
 
     `}/>
     <h2>Dynamic Modal</h2>
+    <h3>Used to render custom UI such as inputs, forms, or any arbitrary markup inside the modal.</h3>
+    <img src="https://files.michaelmachohi.com/svelte-ui/modal-input.png" alt="Input Modal Example"/>
     <RenderCode
         lang="svelte"
         code={`
