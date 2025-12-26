@@ -78,8 +78,8 @@
 	`}/>
 	<h2>Compulsory $User.userId?</h2>
 	<h3>We enforce the userId since some Modules like
-		<a href={routes.Menus} class="note">Editor</a>,
-		<a href={routes.Menus} class="note">File Picker</a>
+		<a href={routes.editor} class="note">Editor</a>,
+		<a href={routes.file_picker} class="note">File Picker</a>
 		rely on it to run efficiently. If you dont plan to use such modules, you can ignore this requirement.
 	</h3>
 </main>

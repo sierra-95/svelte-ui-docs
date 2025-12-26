@@ -18,10 +18,14 @@ export const routes = {
     toast: `${alerts}/toast`,
     maintenance: `${alerts}/maintenance`,
 
+    date: `${core}/date`,
+    file_uploader: `${core}/file-uploader`,
+
 
     // ################Modules################    
     layout: `${modules}/layout`,
-    user_menu: `${modules}/user`,
+    file_picker: `${modules}/file-picker`,
+    editor: `${modules}/editor`,
 
     // ################Stores################ 
     general_stores: `${stores}/general`,
@@ -47,6 +51,16 @@ export const sections = [
                 path: routes.buttons, 
                 label: 'Buttons', 
                 icon: 'fa fa-toggle-off',
+            },
+            { 
+                path: routes.date, 
+                label: 'Date', 
+                icon: 'fa fa-calendar',
+            },
+            { 
+                path: routes.file_uploader, 
+                label: 'File Uploader', 
+                icon: 'fa fa-upload',
             },
             { 
                 path: routes.inputs, 
@@ -103,6 +117,16 @@ export const sections = [
     {
         label: 'Modules',
         items: [
+            { 
+                path: routes.editor, 
+                label: 'Editor',
+                icon: 'fa fa-pencil-square-o' ,
+            },
+            { 
+                path: routes.file_picker, 
+                label: 'File Picker',
+                icon: 'fa fa-cloud-upload' ,
+            },
             { 
                 path: routes.layout, 
                 label: 'Layout',
