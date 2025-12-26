@@ -26,6 +26,7 @@ export const routes = {
     // ################Stores################ 
     general_stores: `${stores}/general`,
     theme_stores: `${stores}/theme`,
+    user_stores: `${stores}/user`,
 };
 
 export const sections = [
@@ -91,6 +92,11 @@ export const sections = [
                 path: routes.theme_stores, 
                 label: 'Theme',
                 icon: 'fa fa-moon-o' ,
+            },
+            { 
+                path: routes.user_stores, 
+                label: 'User',
+                icon: 'fa fa-user-o' ,
             },
         ]
     },
