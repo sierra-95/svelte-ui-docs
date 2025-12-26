@@ -16,7 +16,6 @@ export const routes = {
 
     modal: `${alerts}/modal`,
     toast: `${alerts}/toast`,
-    maintenance: `${alerts}/maintenance`,
 
     date: `${core}/date`,
     file_uploader: `${core}/file-uploader`,
@@ -81,11 +80,6 @@ export const sections = [
                 path: routes.progress,
                 label: 'Progress', 
                 icon: 'fa fa-spinner',
-            },
-            { 
-                path: routes.maintenance, 
-                label: 'Site Under Maintenance',
-                icon: 'fa fa-firefox' ,
             },
             { 
                 path: routes.toast, 

@@ -50,7 +50,7 @@
         <Modal />
 
     `}/>
-    <h2>Plain Modal</h2>
+    <h2>Static Mode</h2>
     <Button onclick={triggerPlainModal}>Click to test</Button>
     <RenderCode
         lang="svelte"
@@ -74,7 +74,7 @@
         <Button onclick={triggerPlainModal}>Click here</Button>
 
     `}/>
-    <h2>Dynamic Modal</h2>
+    <h2>Dynamic Mode</h2>
     <h3>Used to render custom UI such as inputs, forms, or any arbitrary markup inside the modal.</h3>
     <Button onclick={triggerDynamicModal}>Click to test</Button>
     <RenderCode

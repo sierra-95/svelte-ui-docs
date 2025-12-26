@@ -3,14 +3,28 @@
 </script>
 
 <main class="space-y-4">
-	<title>Layout Menu</title>
-	<h1>Layout Menu</h1>
-	<h3>The layout menu is a prebuilt interface with header, menu, application entry point and theme support.
+	<title>Layout</title>
+	<h1>Layout</h1>
+	<h3>The layout menu is a portal scaffold.
         It’s designed to save developers time on setup so they can focus on real development work.
     </h3>
+    <h2>Why Use the Layout?</h2>
+    <ul class="list-disc list-inside space-y-2">
+        <li>Prebuilt responsive layout with header, side menu, and content area.</li>
+        <li>Customizable header with logo, title, and easy-to-integrate SvelteKit routing.</li>
+        <li>In-built <a href={routes.theme_stores} class="note">theme</a> support for light and dark modes.</li>
+    </ul>
+    <h3>
+        This component includes certain components by default, so you don’t need to import them manually.
+    </h3>
+    <ul class="list-disc list-inside space-y-2">
+        <li><a href={routes.modal} class="note">Modal</a></li>
+        <li><a href={routes.toast} class="note">Toast</a></li>
+        <li><a href={routes.file_picker} class="note">File Picker</a></li>
+    </ul>
     <img src="https://files.michaelmachohi.com/svelte-ui/images/layout-dark-theme.png" alt="Dark Theme Layout" />
 	<h2>Getting Started</h2>
-    <h3>Define a sections file. The contents will be mapped to the Layout Menu.</h3>
+    <h3>Define a sections file. The contents will be mapped to the Layout.</h3>
 	<ol class="list-decimal list-inside space-y-2">
         <li>Labels are used to classify routes that fall under a category. Leave empty if a route is independent</li>
         <li>A <strong>hr</strong> is automatically added after category name if label is included.</li>
@@ -78,7 +92,7 @@
 		lang="svelte"
 		code={`
 		<\script>
-			import {Layout, ButtonTheme, UserMenu} from '@sierra-95/svelte-ui'
+			import {Layout, ButtonTheme} from '@sierra-95/svelte-ui'
             import {sections} from './sections.js';
 
             let { children } = $props();
@@ -89,9 +103,8 @@
             contentCenter
         >
             {#snippet headerContent()}
-                <div class="flex items-center gap-4 mr-4">
+                <div class=" mr-4">
                     <ButtonTheme />
-                    <UserMenu absolute='right' />
                 </div>
             {/snippet}
             {@render children()} 
