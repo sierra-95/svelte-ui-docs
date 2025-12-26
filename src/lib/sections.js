@@ -32,6 +32,11 @@ export const routes = {
     user_stores: `${stores}/user`,
 };
 
+export const childrenRoutes = {
+    //FilePicker
+    file_picker: `${routes.file_picker}/storage`,
+};
+
 export const sections = [
     {
         label: 'Getting Started',
