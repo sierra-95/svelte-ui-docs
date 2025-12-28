@@ -10,7 +10,7 @@
   <tbody>
     <tr>
       <td class="p-3 border font-mono">status</td>
-      <td class="p-3 border font-mono">string (success, warning, error)</td>
+      <td class="p-3 border font-mono">string (info, success, warning, error)</td>
       <td class="p-3 border font-mono">'success'</td>
       <td class="p-3 border">Decides Toast background color</td>
     </tr>

@@ -11,8 +11,8 @@
             content: 'Modal has been triggered',
             confirmText: 'Accept',
             cancelText: 'Decline',
-            onConfirm: () => alert('Modal confirmed!'),
-            onCancel: () => alert('Modal cancelled!'),
+            onConfirm: () => {},
+            onCancel: () => {},
         });
     }
 
@@ -38,7 +38,6 @@
 <main class="space-y-4">
     <title>Alert Modal</title>
     <h1>Alert Modal</h1>
-    <h2>Getting Started</h2>
     <h3>Place this anywhere in your app</h3>
     <RenderCode
         lang="svelte"

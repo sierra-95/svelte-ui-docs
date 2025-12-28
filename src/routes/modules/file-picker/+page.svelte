@@ -8,7 +8,7 @@
         isLoggedIn.set(true);
         User.update(user => ({ ...user, userId: 'f47ac10b-58cc-4372-a567-0e02b2c3d479' }) );
         open();
-        setToastMessage('success','Close to read the docs')
+        setToastMessage('info','Close to read the docs')
     })
     function open(){
         fileInputStore.update(store => ({ 
@@ -116,5 +116,5 @@
     <h2>Upload</h2>
     <h3>Built on <a href={routes.file_uploader} class="note">File Uploader</a>, it is used to upload files to the cloud. This means you can control size and type of files to be uploaded.</h3>
     <h2>Integrating your Backend</h2>
-    <h3>Use this <a href={childrenRoutes.file_picker} class="note">guide</a> to integrate your backend</h3>
+    <h3>Use <a href={childrenRoutes.file_picker} class="note">this guide</a> to integrate your backend</h3>
 </main>

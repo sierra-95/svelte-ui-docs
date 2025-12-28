@@ -1,7 +1,7 @@
 <script>
     import { onMount } from 'svelte';
     import {Editor, editorStore, User, isLoggedIn} from '@sierra-95/svelte-ui';
-    import {RenderCode, routes} from '$lib';
+    import {RenderCode, routes, childrenRoutes} from '$lib';
     
     let content = {};
     const r2_key = `svelte-ui/${$User.userId}`;
@@ -52,15 +52,13 @@
         <Editor readOnly bind:content/>
 	`}/>
     <h2>Inserting Images</h2>
-    <h3>A storage solution is required to store images to be used by the editor, as it only uses url's</h3>
     <h3>The editor primarily uses
         <a href={routes.file_picker} class="note">File Picker</a>
-        to handle image uploads and insertions.
-    If you wish to use a different storage solution, an input has been provided to key in image URLs manually.</h3>
-    <h2>Storage Solutions</h2>
-    <h3>The
-        <a href={routes.file_picker} class="note">File Picker</a>
-        runs on Cloudflare R2 as a backend storage solution.
+        to handle multiple image uploads and insertions.
+        An input has also been provided to key in image URLs manually.</h3>
+    <h2>File Picker</h2>
+    <h3>The File Picker runs on Cloudflare R2 as a backend storage solution. 
+        Follow <a href={childrenRoutes.file_picker} class="note">this guide</a> to set up your own backend
     </h3>
     <RenderCode
 		lang="svelte"
