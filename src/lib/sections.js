@@ -53,7 +53,7 @@ export const routes = {
 
 export const sections = [
     {
-        label: 'Getting Started',
+        label: '',
         items: [
             { 
                 path: routes.installation, 

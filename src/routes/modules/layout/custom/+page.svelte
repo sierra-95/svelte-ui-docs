@@ -4,9 +4,9 @@
 <main class="space-y-4">
     <title>Customize</title>
     <h1>Customize the Layout</h1>
-    <h2>More header content ?</h2>
+    <h2>Header</h2>
     <h3>The header can carry much more content, including searchbars, theme switchers, and more.</h3>
-        <RenderCode
+    <RenderCode
         lang="svelte"
         code={`
         <\script>
@@ -29,4 +29,54 @@
         </Layout>
 
     `}/>
+    <h2>Menu</h2>
+    <h3>The menu can be customized to include submenus. 
+        This allows multiple items to be grouped under the same parent path.
+    </h3>
+    <h3>Note the following</h3>
+    <ul class="list-disc list-inside space-y-2">
+        <li>All parents must have a unique id</li>
+        <li>Parent Paths must be unique</li>
+    </ul>
+    <RenderCode
+        lang="javascript"
+        code={`
+        const core = \`/core\`;
+        const alerts = \`\${core}/alerts\`;
+        const routes = {
+            installation: '/',
+            
+            core: {
+                base: \`\${core}\`,
+                children: {
+                    alerts: {
+                        modal: \`\${alerts}/modal\`,
+                        toast: \`\${alerts}/toast\`,
+                    },
+                }
+            },
+        }
+        export const sections = [
+        {
+            label: '',
+            items: [
+                {
+                    id: crypto.randomUUID(),
+                    path: routes.core.base,
+                    label: 'Components',
+                    icon: 'fa fa-cubes',
+                    children:[
+                        { 
+                            path: routes.core.children.alerts.modal, 
+                            label: 'Modal',
+                        },
+                        { 
+                            path: routes.core.children.alerts.toast, 
+                            label: 'Toast',
+                        },
+                    ],
+            }
+        }
+        `}
+    />
 </main>

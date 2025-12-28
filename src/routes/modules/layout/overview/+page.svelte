@@ -8,6 +8,7 @@
 	<h3>The layout menu is a portal scaffold.
         It’s designed to save developers time on setup so they can focus on real development work.
     </h3>
+    <img src="https://files.michaelmachohi.com/svelte-ui/images/layout-example.png" alt="Dark Theme Layout" />
     <h2>Why Use the Layout?</h2>
     <ul class="list-disc list-inside space-y-2">
         <li>Prebuilt responsive layout with header, side menu, and content area.</li>
@@ -22,5 +23,4 @@
         <li><a href={routes.core.children.alerts.toast} class="note">Toast</a></li>
         <li><a href={routes.modules.file_picker.children.overview} class="note">File Picker</a></li>
     </ul>
-    <img src="https://files.michaelmachohi.com/svelte-ui/images/layout-dark-theme.png" alt="Dark Theme Layout" />
 </main>
