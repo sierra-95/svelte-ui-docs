@@ -40,7 +40,7 @@
             }
 	`}/>
     <h2>POST method</h2>
-    <h3>The upload strategy entirely depends on you. If any error occurs or specific files fail to upload, the error will be displayed using toasts.</h3>
+    <h3>The <code>$fileInputStore.serverUploadUrl endpoint</code> is used to upload files to your cloud. If any error occurs or specific files fail to upload, the error will be displayed using toasts.</h3>
     <RenderCode
 		lang="javascript"
 		code={`
