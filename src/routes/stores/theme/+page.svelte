@@ -7,7 +7,7 @@
 	<title>Theme Store</title>
 	<h1>Theme Store</h1>
 	<h3>The theme store is tightly integrated with the 
-        <a href={routes.layout} class="note">Layout component</a> 
+        <a href={routes.modules.layout.children.overview} class="note">Layout component</a> 
         and internal body styling.
     </h3>
     <RenderCode

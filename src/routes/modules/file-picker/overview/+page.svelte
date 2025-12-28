@@ -1,7 +1,7 @@
 <script>
     import { onMount } from 'svelte';
     import {fileInputStore, resetFileInputStore, User, isLoggedIn, Button, Input, setToastMessage} from '@sierra-95/svelte-ui';
-    import {RenderCode, childrenRoutes, routes} from '$lib';
+    import {RenderCode, routes} from '$lib';
     
     const r2_key = `svelte-ui/${$User.userId}`;
     onMount(()=>{
@@ -114,7 +114,5 @@
 	`}/>
     <h3>If <code>$fileInputStore.manage</code> is set to <code>true</code>, users can delete files from the cloud. Once a user starts to select files, the delete option appears.</h3>
     <h2>Upload</h2>
-    <h3>Built on <a href={routes.file_uploader} class="note">File Uploader</a>, it is used to upload files to the cloud. This means you can control size and type of files to be uploaded.</h3>
-    <h2>Integrating your Backend</h2>
-    <h3>Use <a href={childrenRoutes.file_picker} class="note">this guide</a> to integrate your backend</h3>
+    <h3>Built on <a href={routes.core.children.file_uploader} class="note">File Uploader</a>, it is used to upload files to the cloud. This means you can control size and type of files to be uploaded.</h3>
 </main>

@@ -7,34 +7,48 @@ const alerts = `${core}/alerts`;
 export const routes = {
     installation: '/',
     
-    // ################Core################
+    core: {
+        base: `${core}`,
+        children: {
+            buttons: `${core}/buttons`,
+            progress: `${core}/progress`,
+            inputs: `${core}/inputs`,
+            Menus: `${core}/menus`,
 
-    buttons: `${core}/buttons`,
-    progress: `${core}/progress`,
-    inputs: `${core}/inputs`,
-    Menus: `${core}/menus`,
+            alerts: {
+                modal: `${alerts}/modal`,
+                toast: `${alerts}/toast`,
+            },
 
-    modal: `${alerts}/modal`,
-    toast: `${alerts}/toast`,
+            date: `${core}/date`,
+            file_uploader: `${core}/file-uploader`,
+        }
+    },
 
-    date: `${core}/date`,
-    file_uploader: `${core}/file-uploader`,
+    modules: {
+        layout: {
+            base: `${modules}/layout`,
+            children: {
+                overview: `${modules}/layout/overview`,
+                getting_started: `${modules}/layout/getting-started`,
+                custom_content: `${modules}/layout/custom`,
+            }
+        },
+        file_picker: {
+            base: `${modules}/file-picker`,
+            children: {
+                overview: `${modules}/file-picker/overview`,
+                backend: `${modules}/file-picker/backend-integration`,
+            }
+        },
+        editor: `${modules}/editor`,
+    },
 
-
-    // ################Modules################    
-    layout: `${modules}/layout`,
-    file_picker: `${modules}/file-picker`,
-    editor: `${modules}/editor`,
-
-    // ################Stores################ 
-    general_stores: `${stores}/general`,
-    theme_stores: `${stores}/theme`,
-    user_stores: `${stores}/user`,
-};
-
-export const childrenRoutes = {
-    //FilePicker
-    file_picker: `${routes.file_picker}/storage`,
+    stores: {
+        general_stores: `${stores}/general`,
+        theme_stores: `${stores}/theme`,
+        user_stores: `${stores}/user`,
+    },
 };
 
 export const sections = [
@@ -49,67 +63,47 @@ export const sections = [
         ]
     },
     {
-        label: 'Core',
+        label: '',
         items: [
-            { 
-                path: routes.buttons, 
-                label: 'Buttons', 
-                icon: 'fa fa-toggle-off',
-            },
-            { 
-                path: routes.date, 
-                label: 'Date', 
-                icon: 'fa fa-calendar',
-            },
-            { 
-                path: routes.file_uploader, 
-                label: 'File Uploader', 
-                icon: 'fa fa-upload',
-            },
-            { 
-                path: routes.inputs, 
-                label: 'Inputs', 
-                icon: 'fa fa-keyboard-o',
-            },
-            { 
-                path: routes.Menus, 
-                label: 'Menus',
-                icon: 'fa fa-bars' ,
-            },
-            { 
-                path: routes.modal, 
-                label: 'Modal',
-                icon: 'fa fa-exclamation-triangle' ,
-            },
-            { 
-                path: routes.progress,
-                label: 'Progress', 
-                icon: 'fa fa-spinner',
-            },
-            { 
-                path: routes.toast, 
-                label: 'Toast',
-                icon: 'fa fa-info-circle' ,
-            },
-        ]
-    },
-    {
-        label: 'Stores',
-        items: [
-            { 
-                path: routes.general_stores, 
-                label: 'General',
-                icon: 'fa fa-store' ,
-            },
-            { 
-                path: routes.theme_stores, 
-                label: 'Theme',
-                icon: 'fa fa-moon-o' ,
-            },
-            { 
-                path: routes.user_stores, 
-                label: 'User',
-                icon: 'fa fa-user-o' ,
+            {
+                id: crypto.randomUUID(),
+                path: routes.core.base,
+                label: 'Components',
+                icon: 'fa fa-cubes',
+                children:[
+                    { 
+                        path: routes.core.children.buttons, 
+                        label: 'Buttons', 
+                    },
+                    { 
+                        path: routes.core.children.date, 
+                        label: 'Date', 
+                    },
+                    { 
+                        path: routes.core.children.file_uploader, 
+                        label: 'File Uploader', 
+                    },
+                    { 
+                        path: routes.core.children.inputs, 
+                        label: 'Inputs', 
+                    },
+                    { 
+                        path: routes.core.children.Menus, 
+                        label: 'Menus',
+                    },
+                    { 
+                        path: routes.core.children.alerts.modal, 
+                        label: 'Modal',
+                    },
+                    { 
+                        path: routes.core.children.progress,
+                        label: 'Progress', 
+                    },
+                    { 
+                        path: routes.core.children.alerts.toast, 
+                        label: 'Toast',
+                    },
+                ]
             },
         ]
     },
@@ -117,19 +111,66 @@ export const sections = [
         label: 'Modules',
         items: [
             { 
-                path: routes.editor, 
+                path: routes.modules.editor, 
                 label: 'Editor',
                 icon: 'fa fa-pencil-square-o' ,
             },
             { 
-                path: routes.file_picker, 
+                id: crypto.randomUUID(),
+                path: routes.modules.file_picker.base, 
                 label: 'File Picker',
                 icon: 'fa fa-cloud-upload' ,
+                children: [
+                    {
+                        label: 'Overview',
+                        path: routes.modules.file_picker.children.overview,
+                    },
+                    {
+                        label: 'Backend Integration',
+                        path: routes.modules.file_picker.children.backend,
+                    }
+                ]
             },
             { 
-                path: routes.layout, 
+                id: crypto.randomUUID(),
+                path: routes.modules.layout.base, 
                 label: 'Layout',
                 icon: 'fa fa-rocket' ,
+                children: [
+                    {      
+                        label: 'Overview',
+                        path: routes.modules.layout.children.overview,
+                    },
+                    {      
+                        label: 'Getting Started',
+                        path: routes.modules.layout.children.getting_started,
+                    },
+                    {      
+                        label: 'Customize',
+                        path: routes.modules.layout.children.custom_content,
+                    }
+
+                ]
+            },
+        ]
+    },
+    {
+        label: 'Stores',
+        items: [
+            { 
+                path: routes.stores.general_stores, 
+                label: 'General',
+                icon: 'fa fa-store' ,
+            },
+            { 
+                path: routes.stores.theme_stores, 
+                label: 'Theme',
+                icon: 'fa fa-moon-o' ,
+            },
+            { 
+                path: routes.stores.user_stores, 
+                label: 'User',
+                icon: 'fa fa-user-o' ,
             },
         ]
     },

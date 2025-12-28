@@ -3,8 +3,8 @@
 </script>
 
 <main class="space-y-4">
-	<title>File Picker backend</title>
-	<h1>File Picker Backend Integration</h1>
+	<title>Backend Integration</title>
+	<h1>Backend Integration</h1>
     <h2>GET method</h2>
     <h3>When file picker mounts, it loads files using <code>$fileInputStore.serverGetUrl</code> endpoint.</h3>
     <RenderCode

@@ -27,12 +27,12 @@
     <h1>File Uploader</h1>
     <FileInput bind:processing onclick={handleUpload}  />
     <h3>Incase any errors occur during upload, the
-        <a href={routes.toast} class="note">Toast</a>
+        <a href={routes.core.alerts.toast} class="note">Toast</a>
         component will display it. Ensure its imported and added to your root layout.
     </h3>
     <h3>
         If you are using the
-        <a href={routes.layout} class="note">Layout</a> module,
+        <a href={routes.modules.layout.children.overview} class="note">Layout</a> module,
         the <code>Toast</code> component is included by default.
     </h3>
     <RenderCode
