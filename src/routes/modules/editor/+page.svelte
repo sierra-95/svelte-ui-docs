@@ -53,12 +53,12 @@
 	`}/>
     <h2>Inserting Images</h2>
     <h3>The editor primarily uses
-        <a href={routes.modules.file_picker} class="note">File Picker</a>
+        <a href={routes.modules.file_picker.children.overview} class="note">File Picker</a>
         to handle multiple image uploads and insertions.
         An input has also been provided to key in image URLs manually.</h3>
     <h2>File Picker</h2>
     <h3>The File Picker runs on Cloudflare R2 as a backend storage solution. 
-        Follow <a href={routes.modules.file_picker} class="note">this guide</a> to set up your own backend
+        Follow <a href={routes.modules.file_picker.children.backend} class="note">this guide</a> to set up your own backend
     </h3>
     <RenderCode
 		lang="svelte"

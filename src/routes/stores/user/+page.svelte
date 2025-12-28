@@ -26,7 +26,7 @@
 	<title>User Store</title>
 	<h1>User Store</h1>
 	<h3>This store is used by most components to manage user-related data including the  
-        <a href={routes.core.Menus} class="note">UserMenu component</a> 
+        <a href={routes.core.children.Menus} class="note">UserMenu component</a> 
     </h3>
     <RenderCode
 		lang="svelte"
@@ -63,6 +63,6 @@
 	<h3>Here are some modules that rely on $User.userId</h3>
     <ul class="list-disc list-inside space-y-2">
         <li><a href={routes.modules.editor} class="note">Editor</a></li>
-        <li><a href={routes.modules.file_picker} class="note">File Picker</a></li>
+        <li><a href={routes.modules.file_picker.children.overview} class="note">File Picker</a></li>
     </ul>
 </main>
