@@ -13,26 +13,44 @@
   let html = $state('Loading...');
   let copied = $state(false);
 
+  let expanded = $state(false);
+  const PREVIEW_LINES = 5;
+
+  let fullHtml = '';
+  let previewHtml = '';
+
+
   async function setupHighlighter() {
-    if ($theme === 'light') {
-      _theme = 'github-light';
-    } else {
-      _theme = 'github-dark';
-    }
+    _theme = $theme === 'light' ? 'github-light' : 'github-dark';
+
     const highlighter = await createHighlighter({
       themes: [_theme],
       langs: [lang]
     });
 
-    html = highlighter.codeToHtml(code, {
+    fullHtml = highlighter.codeToHtml(code, {
       lang,
       theme: _theme
     });
+
+    const previewCode = code
+      .split('\n')
+      .slice(0, PREVIEW_LINES)
+      .join('\n');
+
+    previewHtml = highlighter.codeToHtml(previewCode, {
+      lang,
+      theme: _theme
+    });
+
+    html = expanded ? fullHtml : previewHtml;
   }
+
   $effect(() => {
     if ($theme) {
       setupHighlighter();
     }
+    html = expanded ? fullHtml : previewHtml;
 	});
 
   async function copyCode() {
@@ -45,9 +63,14 @@
 <main>
   <div style="background-color: var(--shiki-bg);" class="w-full flex justify-between items-center p-2 rounded-t-xl">
     <span class="text-[#475569]">{lang}</span>
-    <button onclick={copyCode} class="cursor-pointer">
-      {copied ? 'Copied' : 'Copy'}
-    </button>
+    <div class="flex gap-5">  
+      <button onclick={() => { expanded = !expanded; }}>
+        {expanded ? 'Collapse' : 'Expand Code'}
+      </button>
+      <button onclick={copyCode}>
+        {copied ? 'Copied' : 'Copy'}
+      </button>
+  </div>
   </div>
   {@html html}
 </main>

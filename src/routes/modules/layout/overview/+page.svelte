@@ -8,7 +8,8 @@
 	<h3>The layout menu is a portal scaffold.
         It’s designed to save developers time on setup so they can focus on real development work.
     </h3>
-    <img src="https://files.michaelmachohi.com/svelte-ui/images/layout-example.png" alt="Dark Theme Layout" />
+    <!-- <img src="https://files.michaelmachohi.com/svelte-ui/images/layout-example.png" alt="Dark Theme Layout" /> -->
+    <iframe src="https://svelte.michaelmachohi.com/" width="100%" height="500" class="rounded-sm" title="Layout"></iframe>
     <h2>Why Use the Layout?</h2>
     <ul class="list-disc list-inside space-y-2">
         <li>Prebuilt responsive layout with header, side menu, and content area.</li>
