@@ -1,16 +1,16 @@
-<script>
+<script lang="ts">
     import { onMount } from 'svelte';
     import {fileInputStore, resetFileInputStore, User, isLoggedIn, Button, Input, setToastMessage} from '@sierra-95/svelte-scaffold';
     import {RenderCode, routes} from '$lib';
     
-    const r2_key = `svelte-scaffold/${$User.userId}`;
     onMount(()=>{
         isLoggedIn.set(true);
         User.update(user => ({ ...user, userId: 'f47ac10b-58cc-4372-a567-0e02b2c3d479' }) );
-        open();
+        const r2_key = `svelte-scaffold/${$User.userId}`;
+        open(r2_key);
         setToastMessage('info','Close to read the docs')
     })
-    function open(){
+    function open(r2_key: string){
         fileInputStore.update(store => ({ 
 			...store, 
             r2_key,

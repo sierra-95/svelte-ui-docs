@@ -4,10 +4,11 @@
     import {RenderCode, routes} from '$lib';
     
     let content = {};
-    const r2_key = `svelte-scaffold/${$User.userId}`;
+    
     onMount(()=>{
         isLoggedIn.set(true);
         User.update(user => ({ ...user, userId: 'f47ac10b-58cc-4372-a567-0e02b2c3d479' }) );
+        const r2_key = `svelte-scaffold/${$User.userId}`;
         editorStore.update(store => {
             store.r2_key = r2_key;
             store.serverGetUrl = '/api/media/get';
@@ -68,10 +69,8 @@
             import {Editor, editorStore, User} from '@sierra-95/svelte-scaffold';
             
             let content = {};
-            const r2_key = \`svelte-scaffold/\${$User.userId}\`;
-            
-            // Configure the editor store for File Picker handling
             onMount(()=>{
+                const r2_key = \`svelte-scaffold/\${$User.userId}\`;
                 editorStore.update(store => {
                     store.r2_key = r2_key;
                     store.serverGetUrl = '/api/media/get';
