@@ -1,5 +1,5 @@
 <script>
-    import {modalStore,Button, Input} from '@sierra-95/svelte-ui';
+    import {modalStore,Button, Input} from '@sierra-95/svelte-scaffold';
     import {RenderCode} from '$lib';
     import ModalTable from '../_table/modal.svelte';
 
@@ -43,7 +43,7 @@
         lang="svelte"
         code={`
         <\script>
-            import { Modal } from '@sierra-95/svelte-ui';
+            import { Modal } from '@sierra-95/svelte-scaffold';
         <\/script>
 
         <Modal />
@@ -55,7 +55,7 @@
         lang="svelte"
         code={`
         <\script>
-            import { modalStore, Button } from '@sierra-95/svelte-ui';
+            import { modalStore, Button } from '@sierra-95/svelte-scaffold';
 
             function triggerPlainModal() {
                 modalStore.set({
@@ -80,7 +80,7 @@
         lang="svelte"
         code={`
         <\script>
-            import { modalStore, Button, Input } from '@sierra-95/svelte-ui';
+            import { modalStore, Button, Input } from '@sierra-95/svelte-scaffold';
 
             let value = '';
             function Submit(){}

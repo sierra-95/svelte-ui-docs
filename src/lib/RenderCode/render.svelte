@@ -1,7 +1,7 @@
 <script>
   import { createHighlighter } from 'shiki';
   import { tick } from 'svelte';
-  import {theme} from '@sierra-95/svelte-ui';
+  import {theme} from '@sierra-95/svelte-scaffold';
   import './shiki.css';
 
   const {

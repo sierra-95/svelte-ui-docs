@@ -1,5 +1,5 @@
 <script>
-    import { Date, Time} from '@sierra-95/svelte-ui';
+    import { Date, Time} from '@sierra-95/svelte-scaffold';
     import {RenderCode} from '$lib';
 
     const timezone = "America/New_York";
@@ -15,7 +15,7 @@
 		lang="svelte"
 		code={`
 		<\script>
-            import { Date, Time} from '@sierra-95/svelte-ui';
+            import { Date, Time} from '@sierra-95/svelte-scaffold';
 
             const timezone = "America/New_York";
 		<\/script>

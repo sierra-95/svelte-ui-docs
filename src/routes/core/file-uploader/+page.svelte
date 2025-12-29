@@ -1,6 +1,6 @@
 <script>
     import { onMount } from 'svelte';
-    import { FileInput, fileInputStore, resetFileInputStore} from '@sierra-95/svelte-ui';
+    import { FileInput, fileInputStore, resetFileInputStore} from '@sierra-95/svelte-scaffold';
     import {RenderCode, routes} from '$lib';
     
     let processing = false; 
@@ -40,7 +40,7 @@
         code={`
         <\script>
             import { onMount } from 'svelte';
-            import { FileInput, fileInputStore, resetFileInputStore} from '@sierra-95/svelte-ui';
+            import { FileInput, fileInputStore, resetFileInputStore} from '@sierra-95/svelte-scaffold';
         
             let processing = false; 
 

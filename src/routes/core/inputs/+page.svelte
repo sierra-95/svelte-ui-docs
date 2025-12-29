@@ -1,5 +1,5 @@
 <script lang="ts">
-	import {Input, PasswordInput} from '@sierra-95/svelte-ui';
+	import {Input, PasswordInput} from '@sierra-95/svelte-scaffold';
 	import {RenderCode} from '$lib';
 	let email = '';
 	let password = '';
@@ -19,7 +19,7 @@
 		lang="svelte"
 		code={`
 		<\script>
-			import { Input } from '@sierra-95/svelte-ui';
+			import { Input } from '@sierra-95/svelte-scaffold';
 			let email = '';
 		<\/script>
 		<!-- id == name == label_for -->
@@ -43,7 +43,7 @@
 		lang="svelte"
 		code={`
 		<\script>
-			import { PasswordInput } from '@sierra-95/svelte-ui';
+			import { PasswordInput } from '@sierra-95/svelte-scaffold';
 			let password = '';
 		<\/script>
 

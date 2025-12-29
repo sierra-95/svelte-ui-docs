@@ -51,7 +51,7 @@
         lang="svelte"
         code={`
         <\script>
-            import {Layout, ButtonTheme} from '@sierra-95/svelte-ui'
+            import {Layout, ButtonTheme} from '@sierra-95/svelte-scaffold'
             import {sections} from './sections.js';
             
             let { children } = $props();

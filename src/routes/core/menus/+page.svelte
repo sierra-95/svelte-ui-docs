@@ -1,5 +1,5 @@
 <script>
-    import {UserMenu, MenuItem, DropdownContainer} from '@sierra-95/svelte-ui'
+    import {UserMenu, MenuItem, DropdownContainer} from '@sierra-95/svelte-scaffold';
 	import {RenderCode} from '$lib';
     import UserMenuTable from './_table/userMenu.svelte';
 
@@ -46,7 +46,7 @@
         lang="svelte"
         code={`
         <\script>
-            import {DropdownContainer, MenuItem} from '@sierra-95/svelte-ui
+            import {DropdownContainer, MenuItem} from '@sierra-95/svelte-scaffold'
             
             let openDropdown = $state(true);
         <\/script>
@@ -76,7 +76,7 @@
         lang="svelte"
         code={`
         <\script>
-            import {UserMenu, MenuItem} from '@sierra-95/svelte-ui
+            import {UserMenu, MenuItem} from '@sierra-95/svelte-scaffold'
 
             let user = {
                 name: 'John Doe',

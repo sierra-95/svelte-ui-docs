@@ -5,7 +5,7 @@
 <main class="space-y-4">
   <title>Getting Started</title>
   <h3>
-    <strong>@sierra-95/svelte-ui</strong> is a component library built for the Svelte ecosystem.  
+    <strong>@sierra-95/svelte-scaffold</strong> is a component library built for the Svelte ecosystem.  
     It offers expressive, accessible, and flexible components to accelerate your Svelte projects.
   </h3>
   <h3>
@@ -14,7 +14,7 @@
   <RenderCode
     lang="bash"
     code={`
-    npm i @sierra-95/svelte-ui    
+    npm i @sierra-95/svelte-scaffold    
   `}/>
 
   <h3>Add this in your <strong>app.html</strong></h3>
@@ -30,7 +30,7 @@
   <RenderCode
       lang="css"
       code={`
-      @import '@sierra-95/svelte-ui/global.css';
+      @import '@sierra-95/svelte-scaffold/global.css';
   `}/>
   <h3>And thats it!</h3>
   <h2>Usage Example</h2>
@@ -39,7 +39,7 @@
     lang="svelte"
     code={`
     <\script>
-      import { Button } from '@sierra-95/svelte-ui';
+      import { Button } from '@sierra-95/svelte-scaffold';
     <\/script>
 
     <Button onclick={() => alert('Button clicked!')}>

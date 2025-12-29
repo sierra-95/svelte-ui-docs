@@ -1,6 +1,6 @@
 <script>
     import { onMount, onDestroy } from 'svelte';
-    import {setToastMessage,clearToastMessage, Button} from '@sierra-95/svelte-ui'
+    import {setToastMessage,clearToastMessage, Button} from '@sierra-95/svelte-scaffold'
     import {RenderCode} from '$lib';
     import ToastTable from '../_table/toast.svelte';
    
@@ -29,7 +29,7 @@
         lang="svelte"
         code={`
         <\script>
-            import { Toast } from '@sierra-95/svelte-ui';
+            import { Toast } from '@sierra-95/svelte-scaffold';
         <\/script>
 
         <Toast />
@@ -41,7 +41,7 @@
         lang="svelte"
         code={`
         <\script>
-            import {setToastMessage, Button} from '@sierra-95/svelte-ui';
+            import {setToastMessage, Button} from '@sierra-95/svelte-scaffold';
 
             function triggerToast(){
                 setToastMessage('success', 'Toast Triggered');
@@ -58,7 +58,7 @@
         code={`
         <\script>
             import { onMount, onDestroy } from 'svelte';
-            import {setToastMessage,clearToastMessage} from '@sierra-95/svelte-ui';
+            import {setToastMessage,clearToastMessage} from '@sierra-95/svelte-scaffold';
 
             setToastMessage(
                 'success', 

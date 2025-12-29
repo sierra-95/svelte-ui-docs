@@ -1,5 +1,5 @@
 <script lang="ts">
-	import {CircularProgress, LinearProgress} from '@sierra-95/svelte-ui';
+	import {CircularProgress, LinearProgress} from '@sierra-95/svelte-scaffold';
 	import {RenderCode} from '$lib';
 </script>
 
@@ -12,7 +12,7 @@
 		lang="svelte"
 		code={`
 		<\script>
-			import { CircularProgress } from '@sierra-95/svelte-ui';
+			import { CircularProgress } from '@sierra-95/svelte-scaffold';
 		<\/script>
 
 		<CircularProgress />
@@ -24,7 +24,7 @@
 		lang="svelte"
 		code={`
 		<\script>
-			import { LinearProgress } from '@sierra-95/svelte-ui';
+			import { LinearProgress } from '@sierra-95/svelte-scaffold';
 		<\/script>
 
 		<LinearProgress />

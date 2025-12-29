@@ -1,9 +1,9 @@
 <script>
     import { onMount } from 'svelte';
-    import {fileInputStore, resetFileInputStore, User, isLoggedIn, Button, Input, setToastMessage} from '@sierra-95/svelte-ui';
+    import {fileInputStore, resetFileInputStore, User, isLoggedIn, Button, Input, setToastMessage} from '@sierra-95/svelte-scaffold';
     import {RenderCode, routes} from '$lib';
     
-    const r2_key = `svelte-ui/${$User.userId}`;
+    const r2_key = `svelte-scaffold/${$User.userId}`;
     onMount(()=>{
         isLoggedIn.set(true);
         User.update(user => ({ ...user, userId: 'f47ac10b-58cc-4372-a567-0e02b2c3d479' }) );
@@ -50,9 +50,9 @@
 		lang="svelte"
 		code={`
 		<\script>
-            import {fileInputStore} from '@sierra-95/svelte-ui';
+            import {fileInputStore} from '@sierra-95/svelte-scaffold';
         
-            const r2_key = \`svelte-ui/\${$User.userId}\`;
+            const r2_key = \`svelte-scaffold/\${$User.userId}\`;
             
             function open(){
                 fileInputStore.update(store => ({ 
@@ -83,7 +83,7 @@
 		lang="svelte"
 		code={`
 		<\script>
-            import {User, Input, FilePicker, fileInputStore, resetFileInputStore} from '@sierra-95/svelte-ui';
+            import {User, Input, FilePicker, fileInputStore, resetFileInputStore} from '@sierra-95/svelte-scaffold';
             
             function limitFilePickerMenu(){
                 fileInputStore.update(store => ({ 

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../app.css';
-	import {Layout, ButtonTheme} from '@sierra-95/svelte-ui';
+	import {Layout, ButtonTheme} from '@sierra-95/svelte-scaffold';
 	import {sections} from '$lib';
 
 	let { children } = $props();
@@ -15,7 +15,7 @@
 </svelte:head>
 
 <Layout 
-	headerTitle = 'Sierra-95/svelte-ui'
+	headerTitle = 'Sierra-95/svelte-scaffold'
 	headerLink = '/'
 	headerImage = 'https://files.michaelmachohi.com/logos/michaelmachohi.black.png'
 	headerImageSize = '35px'

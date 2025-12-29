@@ -1,5 +1,5 @@
 <script lang="ts">
-	import {Button, ButtonFlip, ButtonMarquee, ButtonSwipe} from '@sierra-95/svelte-ui'
+	import {Button, ButtonFlip, ButtonMarquee, ButtonSwipe} from '@sierra-95/svelte-scaffold'
 	import {RenderCode} from '$lib';
 	import ButtonCustom from './_tables/buttonCustom.svelte';
 	import ButtonDefault from './_tables/buttonDefault.svelte';
@@ -34,7 +34,7 @@
 		lang="svelte"
 		code={`
 		<\script>
-			import { Button } from '@sierra-95/svelte-ui';
+			import { Button } from '@sierra-95/svelte-scaffold';
 		<\/script>
 
 		<Button onclick={() => alert('Button clicked!')}>
@@ -49,7 +49,7 @@
 			code={`
 			<\script>
 				import { enhance } from '$app/forms';
-				import { Button } from '@sierra-95/svelte-ui';
+				import { Button } from '@sierra-95/svelte-scaffold';
 				
 				let processing = false;
 				let success = false;
@@ -94,7 +94,7 @@
         lang="svelte"
         code={`
         <\script>
-            import { ButtonMarquee } from '@sierra-95/svelte-ui';
+            import { ButtonMarquee } from '@sierra-95/svelte-scaffold';
         <\/script>
 
         <ButtonMarquee text='Sign In' link='/auth' bg='red' color = 'blue'  />

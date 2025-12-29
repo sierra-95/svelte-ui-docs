@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-    import {User, resetUserStore} from '@sierra-95/svelte-ui';
+    import {User, resetUserStore} from '@sierra-95/svelte-scaffold';
     import {RenderCode, routes} from '$lib';
 
 	onMount(() => {
@@ -33,7 +33,7 @@
 		code={`
 		<\script>
 			import { onMount } from 'svelte';
-	        import {User, resetUserStore} from '@sierra-95/svelte-ui';
+	        import {User, resetUserStore} from '@sierra-95/svelte-scaffold';
 
 			onMount(() => {
 				User.update(store => {

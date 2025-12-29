@@ -1,5 +1,5 @@
 <script>
-    import {ButtonTheme} from '@sierra-95/svelte-ui';
+    import {ButtonTheme} from '@sierra-95/svelte-scaffold';
     import {RenderCode, routes} from '$lib';
 </script>
 
@@ -15,7 +15,7 @@
 		code={`
 		<\script>
             import { onMount } from 'svelte';
-			import { theme } from '@sierra-95/svelte-ui';
+			import { theme } from '@sierra-95/svelte-scaffold';
 			onMount(() => {
                 theme.set('light');
             });
@@ -32,7 +32,7 @@
 		lang="svelte"
 		code={`
 		<\script>
-	        import {ButtonTheme} from '@sierra-95/svelte-ui';
+	        import {ButtonTheme} from '@sierra-95/svelte-scaffold';
 		<\/script>
         <ButtonTheme />
 	`}/>

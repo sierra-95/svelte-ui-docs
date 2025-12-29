@@ -1,10 +1,10 @@
 <script>
     import { onMount } from 'svelte';
-    import {Editor, editorStore, User, isLoggedIn} from '@sierra-95/svelte-ui';
+    import {Editor, editorStore, User, isLoggedIn} from '@sierra-95/svelte-scaffold';
     import {RenderCode, routes} from '$lib';
     
     let content = {};
-    const r2_key = `svelte-ui/${$User.userId}`;
+    const r2_key = `svelte-scaffold/${$User.userId}`;
     onMount(()=>{
         isLoggedIn.set(true);
         User.update(user => ({ ...user, userId: 'f47ac10b-58cc-4372-a567-0e02b2c3d479' }) );
@@ -26,7 +26,7 @@
 		lang="svelte"
 		code={`
 		<\script>
-            import {Editor} from '@sierra-95/svelte-ui';
+            import {Editor} from '@sierra-95/svelte-scaffold';
             let content = {};
 		<\/script>
         <Editor bind:content/>
@@ -45,7 +45,7 @@
 		lang="svelte"
 		code={`
 		<\script>
-            import {Editor} from '@sierra-95/svelte-ui';
+            import {Editor} from '@sierra-95/svelte-scaffold';
             export let data;
             let content = data.content; // Load previously saved content
 		<\/script>
@@ -65,10 +65,10 @@
 		code={`
 		<\script>
             import { onMount } from 'svelte';
-            import {Editor, editorStore, User} from '@sierra-95/svelte-ui';
+            import {Editor, editorStore, User} from '@sierra-95/svelte-scaffold';
             
             let content = {};
-            const r2_key = \`svelte-ui/\${$User.userId}\`;
+            const r2_key = \`svelte-scaffold/\${$User.userId}\`;
             
             // Configure the editor store for File Picker handling
             onMount(()=>{
