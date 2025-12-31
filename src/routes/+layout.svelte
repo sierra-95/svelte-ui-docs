@@ -1,13 +1,21 @@
 <script lang="ts">
 	import '../app.css';
-	import {Layout, ButtonTheme} from '@sierra-95/svelte-scaffold';
+	import {Layout, ButtonTheme, theme} from '@sierra-95/svelte-scaffold';
 	import {sections} from '$lib';
 
 	let { children } = $props();
+	let link = $state('');
+	$effect(() => {
+		if($theme === 'light'){
+			link = 'https://files.michaelmachohi.com/logos/michaelmachohi.dark.blue.png';
+		}else{
+			link = 'https://files.michaelmachohi.com/logos/michaelmachohi.light.blue.png';
+		}
+	});
 </script>
 
 <svelte:head>
-	<link rel="icon" href="https://files.michaelmachohi.com/logos/michaelmachohi.favicon.png" />
+	<link rel="icon" href="https://files.michaelmachohi.com/logos/michaelmachohi.favicon.circle.ico" />
 	<script
 	src="https://kit.fontawesome.com/b63be7ac2d.js"
 	crossorigin="anonymous"
@@ -17,13 +25,13 @@
 <Layout 
 	headerTitle = 'Sierra-95/svelte-scaffold'
 	headerLink = '/'
-	headerImage = 'https://files.michaelmachohi.com/logos/michaelmachohi.black.png'
+	headerImage = {link}
 	headerImageSize = '35px'
 	{sections}
 	contentCenter
->
-	{#snippet headerContent()}
-		<div class="mr-4"><ButtonTheme /></div>
-	{/snippet}
-	{@render children()} 
+	headerRightContent = {headerRightContent}
+>{@render children()} 
 </Layout>
+{#snippet headerRightContent()}
+	<div class="mr-4"><ButtonTheme /></div>
+{/snippet}

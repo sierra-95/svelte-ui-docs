@@ -14,14 +14,15 @@
   let copied = $state(false);
 
   let expanded = $state(false);
-  const PREVIEW_LINES = 5;
+  const PREVIEW_LINES = 10;
 
   let fullHtml = '';
   let previewHtml = '';
 
-
+  //dracula, everforest-dark, one-dark-pro, 
+  //github-light light-plus
   async function setupHighlighter() {
-    _theme = $theme === 'light' ? 'github-light' : 'github-dark';
+    _theme = $theme === 'light' ? 'github-light' : 'everforest-dark';
 
     const highlighter = await createHighlighter({
       themes: [_theme],
