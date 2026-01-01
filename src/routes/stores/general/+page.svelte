@@ -8,8 +8,8 @@
 </script>
 
 <main class="space-y-4">
-	<title>Stores</title>
-	<h1>Stores</h1>
+	<title>General Stores</title>
+	<h1>General Stores</h1>
 	<h3><strong>@sierra-95/svelte-scaffold</strong> offers a variety of store components for managing state in your Svelte applications.</h3>
 	<h2>isMobile (768px)</h2>
 	<RenderCode

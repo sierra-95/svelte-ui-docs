@@ -5,7 +5,8 @@ const stores = `/stores`;
 const alerts = `${core}/alerts`;
 
 export const routes = {
-    installation: '/',
+    overview: '/',
+    installation: '/installation',
     
     core: {
         base: `${core}`,
@@ -53,8 +54,13 @@ export const routes = {
 
 export const sections = [
     {
-        label: '',
+        label: 'Getting Started',
         items: [
+            {
+                path: routes.overview, 
+                label: 'Overview', 
+                icon: 'fa fa-home'
+            },
             { 
                 path: routes.installation, 
                 label: 'Installation', 
@@ -63,7 +69,7 @@ export const sections = [
         ]
     },
     {
-        label: '',
+        label: 'Core',
         items: [
             {
                 id: crypto.randomUUID(),
