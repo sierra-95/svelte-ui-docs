@@ -61,7 +61,7 @@
       </div>
 
       <div class="p-6">
-        <a href={routes.modules.layout.base}
+        <a href={routes.modules.editor}
           class="mb-2 block text-sm font-bold uppercase tracking-wide text-(--primary-bg) hover:underline"
         >Modules
         </a>
