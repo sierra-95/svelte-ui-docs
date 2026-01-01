@@ -55,10 +55,10 @@
 
 			<div class="feature-card">
 				<div class="feature-icon">
-					<i class="fas fa-paint-brush"></i>
+					<i class="fas fa-gift"></i>
 				</div>
-				<h3>Fully Customizable</h3>
-				<p>Tailwind CSS based components you can theme to your brand</p>
+				<h3>Out of the Box</h3>
+				<p>Powerful, production-ready modules you can use immediately without setup</p>
 			</div>
 
 			<div class="feature-card">
