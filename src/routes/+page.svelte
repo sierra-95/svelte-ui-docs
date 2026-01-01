@@ -123,6 +123,29 @@
 		padding: 4rem 2rem;
 	}
 
+	.welcome-section {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.welcome-text {
+		font-size: 1rem;
+		color: var(--text-secondary);
+		margin-bottom: 0.5rem;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		font-weight: 500;
+	}
+
+	.library-name {
+		font-size: 2.5rem;
+		font-weight: 800;
+		color: var(--primary);
+		margin-bottom: 0;
+		font-family: monospace;
+		letter-spacing: -0.02em;
+	}
+
 	.hero-content {
 		margin-bottom: 5rem;
 	}
