@@ -1,44 +1,25 @@
 <script lang="ts">
   import { routes } from '$lib';
-  import { Button } from '@sierra-95/svelte-scaffold';
-  import { goto } from '$app/navigation';
+  import { ButtonFlip } from '@sierra-95/svelte-scaffold';
 </script>
 
 <main id='scaffold-overview' class="mx-auto max-w-[1200px] px-8 py-16 md:px-8 md:py-16 sm:px-4 sm:py-8 h-full">
   <!-- Welcome -->
   <div class="mb-12 text-center">
-    <p
-      class="mb-2 text-sm font-medium uppercase tracking-widest text-(--text-secondary)"
-    >
-      Welcome to
+    <p class="mb-2 text-sm font-medium uppercase tracking-widest text-(--text-secondary)"
+    >Welcome to
     </p>
-    <h1
-      class="font-mono text-2xl font-extrabold tracking-[-0.02em] text-(--primary-bg) sm:text-3xl"
-    >
-      @sierra-95/svelte-scaffold
+    <h1 class="font-mono text-2xl font-extrabold tracking-[-0.02em] text-(--primary-bg) sm:text-3xl"
+    >@sierra-95/svelte-scaffold
     </h1>
   </div>
 
   <!-- Hero -->
-  <div class="mb-20">
-    <div class="mb-16 text-center">
-      <p
-        class="mx-auto mb-8 max-w-[600px] text-xl leading-relaxed text-(--text-secondary) sm:text-base"
-      >
-        A powerful Svelte scaffold with pre-built components, modules, and stores to jumpstart your project.
-      </p>
-
-      <div
-        class="flex flex-wrap justify-center gap-4"
-      >
-        <Button onclick={() => goto(routes.installation)}>
-          Get Started
-        </Button>
-        <Button onclick={() => goto(routes.modules.editor)}>
-          Explore Modules
-        </Button>
-      </div>
-    </div>
+  <div class="text-center">
+    <p class="mx-auto mb-8 max-w-[600px] text-xl leading-relaxed text-(--text-secondary) sm:text-base"
+    >A powerful Svelte scaffold with pre-built components, modules, and stores to jumpstart your project.
+    </p>
+    <ButtonFlip link={routes.installation} front="Get Started" back="Lets Go!"/>
   </div>
 
   <!-- Features -->
