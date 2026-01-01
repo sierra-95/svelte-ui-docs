@@ -3,9 +3,14 @@
 </script>
 
 <div class="hero-container">
+	<div class="welcome-section">
+		<p class="welcome-text">Welcome to</p>
+		<h1 class="library-name">@sierra-95/svelte-scaffold</h1>
+	</div>
+
 	<div class="hero-content">
 		<div class="hero-text">
-			<h1 class="hero-title">Build Your App in a Week</h1>
+			<h2 class="hero-title">Build Your App in a Week</h2>
 			<p class="hero-subtitle">
 				A powerful Svelte scaffold with pre-built components, modules, and stores to jumpstart your project.
 			</p>
