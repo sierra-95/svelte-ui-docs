@@ -366,6 +366,10 @@
 			padding: 2rem 1rem;
 		}
 
+		.library-name {
+			font-size: 1.75rem;
+		}
+
 		.hero-title {
 			font-size: 2rem;
 		}
