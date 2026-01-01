@@ -22,7 +22,6 @@ export const routes = {
             },
 
             date: `${core}/date`,
-            file_uploader: `${core}/file-uploader`,
         }
     },
 
@@ -84,10 +83,6 @@ export const sections = [
                     { 
                         path: routes.core.children.date, 
                         label: 'Date', 
-                    },
-                    { 
-                        path: routes.core.children.file_uploader, 
-                        label: 'File Uploader', 
                     },
                     { 
                         path: routes.core.children.inputs, 

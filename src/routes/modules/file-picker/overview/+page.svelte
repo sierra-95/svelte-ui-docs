@@ -114,5 +114,5 @@
 	`}/>
     <h3>If <code>$fileInputStore.manage</code> is set to <code>true</code>, users can delete files from the cloud. Once a user starts to select files, the delete option appears.</h3>
     <h2>Upload</h2>
-    <h3>Built on <a href={routes.core.children.file_uploader} class="note">File Uploader</a>, it is used to upload files to the cloud. This means you can control size and type of files to be uploaded.</h3>
+    <h3>Built on <a href={routes.core.children.inputs} class="note">File Input</a>, it is used to upload files to the cloud. This means you can control size and type of files to be uploaded.</h3>
 </main>
