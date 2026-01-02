@@ -13,16 +13,6 @@
     code={`
     npm i @sierra-95/svelte-scaffold    
   `}/>
-
-  <h3>Add this in your <strong>app.html</strong></h3>
-  <RenderCode
-      lang="html"
-      code={`
-      <\script
-        src="https://kit.fontawesome.com/b63be7ac2d.js"
-        crossorigin="anonymous"
-      ></script>
-  `}/>
   <h3>Add this in your <strong>app.css</strong></h3>
   <RenderCode
       lang="css"

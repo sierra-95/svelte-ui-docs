@@ -1,6 +1,6 @@
 <script lang="ts">
     import {fileInputStore, resetFileInputStore, Button, Input} from '@sierra-95/svelte-scaffold';
-    import {RenderCode, routes} from '$lib';
+    import {RenderCode, routes, sectioning} from '$lib';
 
     function limitFilePickerMenu(){
         fileInputStore.update(store => ({ 
@@ -69,7 +69,7 @@
         />
 	`}/>
     <h2>Accept Types</h2>
-    <h3>File Picker is built on <a href={routes.core.children.inputs} class="note">File Input</a>. This means you can control size and type of files to be uploaded.</h3>
+    <h3>File Picker is built on <a href={`${routes.core.children.inputs}#${sectioning.inputs.file_input}`} class="note">File Input</a>. This means you can control size and type of files to be uploaded.</h3>
     <h2>Deleting files</h2>
     <h3>To delete files from File Picker, set <code>$fileInputStore.manage</code> to <code>true</code>. A trash button will now be displayed if user selects a file</h3>
 </main>

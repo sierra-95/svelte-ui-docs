@@ -26,23 +26,8 @@
 
 <main class="space-y-4">
 	<title>Inputs</title>
-	<h1 class="font-bold text-2xl">Inputs</h1>
-	<Input 
-		id="email" 
-		type="email" 
-		label="Email Address" 
-		placeholder="Enter your email"
-		bind:value={email}
-	/>
-	<RenderCode
-		lang="svelte"
-		code={`
-		<\script>
-			import { Input } from '@sierra-95/svelte-scaffold';
-			let email = '';
-		<\/script>
-		<!-- id == name == label_for -->
-		<!-- type: default=text, options: text, number, email, tel, url  etc-->
+	<section id="doc-input-basic" class="space-y-4">
+		<h1 class="font-bold text-2xl">Inputs</h1>
 		<Input 
 			id="email" 
 			type="email" 
@@ -50,65 +35,87 @@
 			placeholder="Enter your email"
 			bind:value={email}
 		/>
-		
-	`}/>
-	<h2>Password Input</h2>
-	<PasswordInput
-		id="password" 
-		label="Password" 
-		placeholder="Enter your password"
-		bind:value={password} 
-	/>
-	<RenderCode
-		lang="svelte"
-		code={`
-		<\script>
-			import { PasswordInput } from '@sierra-95/svelte-scaffold';
-			let password = '';
-		<\/script>
-
-		<!-- id == name == label_for -->
+		<RenderCode
+			lang="svelte"
+			code={`
+			<\script>
+				import { Input } from '@sierra-95/svelte-scaffold';
+				let email = '';
+			<\/script>
+			<!-- id == name == label_for -->
+			<!-- type: default=text, options: text, number, email, tel, url  etc-->
+			<Input 
+				id="email" 
+				type="email" 
+				label="Email Address" 
+				placeholder="Enter your email"
+				bind:value={email}
+			/>
+			
+		`}/>
+	</section>
+	
+	<section id="doc-input-password" class="space-y-4">
+		<h2>Password Input</h2>
 		<PasswordInput
 			id="password" 
 			label="Password" 
 			placeholder="Enter your password"
 			bind:value={password} 
 		/>
-		
-	`}/>
+		<RenderCode
+			lang="svelte"
+			code={`
+			<\script>
+				import { PasswordInput } from '@sierra-95/svelte-scaffold';
+				let password = '';
+			<\/script>
 
-	<h2>File Input</h2>
-    <FileInput bind:processing onclick={handleUpload}  />
-    <h3>Incase any errors occur during upload, the
-        <a href={routes.core.children.alerts.toast} class="note">Toast</a>
-        component will display it. Ensure its imported and added to your root layout.
-    </h3>
-    <RenderCode
-        lang="svelte"
-        code={`
-        <\script>
-            import { onMount } from 'svelte';
-            import { FileInput, fileInputStore, resetFileInputStore} from '@sierra-95/svelte-scaffold';
-        
-            let processing = false; 
+			<!-- id == name == label_for -->
+			<PasswordInput
+				id="password" 
+				label="Password" 
+				placeholder="Enter your password"
+				bind:value={password} 
+			/>
+			
+		`}/>
+	</section>
 
-            function handleUpload(){
-                processing = true;
-                const files = $fileInputStore.selectedFiles;
-                //process the files here
-                processing = false;
-                resetFileInputStore();
-            }
+	<section id="doc-file-input" class="space-y-4">
+		<h2>File Input</h2>
+		<FileInput bind:processing onclick={handleUpload}  />
+		<h3>Incase any errors occur during upload, the
+			<a href={routes.core.children.alerts.toast} class="note">Toast</a>
+			component will display it. Ensure its imported and added to your root layout.
+		</h3>
+		<RenderCode
+			lang="svelte"
+			code={`
+			<\script>
+				import { onMount } from 'svelte';
+				import { FileInput, fileInputStore, resetFileInputStore} from '@sierra-95/svelte-scaffold';
+			
+				let processing = false; 
 
-            // uploadType: Array<'image' | 'audio' | 'video' | 'pdf'>;
-            onMount(() => {
-                fileInputStore.update(store => {
-                    store.sizeConstraint = 5 * 1024 * 1024; // 5 MB
-                    store.uploadType = ['image','video','audio','pdf'];
-                    return store;
-                });
-            });
-        <\/script>
-        <FileInput bind:processing onclick={handleUpload}  />
-    `}/>
+				function handleUpload(){
+					processing = true;
+					const files = $fileInputStore.selectedFiles;
+					//process the files here
+					processing = false;
+					resetFileInputStore();
+				}
+
+				// uploadType: Array<'image' | 'audio' | 'video' | 'pdf'>;
+				onMount(() => {
+					fileInputStore.update(store => {
+						store.sizeConstraint = 5 * 1024 * 1024; // 5 MB
+						store.uploadType = ['image','video','audio','pdf'];
+						return store;
+					});
+				});
+			<\/script>
+			<FileInput bind:processing onclick={handleUpload}  />
+		`}/>
+	</section>
 </main>

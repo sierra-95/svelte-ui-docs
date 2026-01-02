@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../app.css';
-	import { onMount } from 'svelte';
+	import { onMount, tick } from 'svelte';
 	import {Layout, ButtonTheme, theme, isLoggedIn, User} from '@sierra-95/svelte-scaffold';
 	import {sections} from '$lib';
 
@@ -18,12 +18,23 @@
         isLoggedIn.set(true);
         User.update(user => ({ ...user, userId: 'f47ac10b-58cc-4372-a567-0e02b2c3d479' }) );
     })
+
+	onMount(async () => {
+		await tick();
+
+		const hash = window.location.hash;
+		if (hash) {
+			const el = document.querySelector(hash);
+			el?.scrollIntoView({ behavior: 'smooth' });
+		}
+	});
+
 </script>
 
 <svelte:head>
 	<link rel="icon" href="https://files.michaelmachohi.com/logos/michaelmachohi.favicon.circle.ico" />
 	<script
-	src="https://kit.fontawesome.com/b63be7ac2d.js"
+	src="https://kit.fontawesome.com/dd0e902104.js"
 	crossorigin="anonymous"
 	></script>
 </svelte:head>

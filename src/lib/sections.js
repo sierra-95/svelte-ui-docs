@@ -7,6 +7,7 @@ const alerts = `${core}/alerts`;
 export const routes = {
     overview: '/',
     installation: '/installation',
+    font_awesome: '/font-awesome',
     
     core: {
         base: `${core}`,
@@ -52,6 +53,14 @@ export const routes = {
     },
 };
 
+export const sectioning = {
+    inputs: {
+        basic: 'doc-input-basic',
+        password: 'doc-input-password',
+        file_input: 'doc-file-input',
+    }
+}
+
 export const sections = [
     {
         label: 'Getting Started',
@@ -66,6 +75,11 @@ export const sections = [
                 label: 'Installation', 
                  icon: 'fa fa-download' 
             },
+            {
+                path: routes.font_awesome, 
+                label: 'Font Awesome', 
+                icon: 'fa fa-font-awesome'
+            }
         ]
     },
     {
