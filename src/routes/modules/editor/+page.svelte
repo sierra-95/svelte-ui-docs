@@ -1,13 +1,9 @@
 <script>
-    import { onMount } from 'svelte';
-    import {Editor, editorStore, User, isLoggedIn} from '@sierra-95/svelte-scaffold';
+    import {Editor, editorStore, User} from '@sierra-95/svelte-scaffold';
     import {RenderCode, routes} from '$lib';
     
     let content = {};
-    
-    onMount(()=>{
-        isLoggedIn.set(true);
-        User.update(user => ({ ...user, userId: 'f47ac10b-58cc-4372-a567-0e02b2c3d479' }) );
+    $: if($User.userId){
         const r2_key = `svelte-scaffold/${$User.userId}`;
         editorStore.update(store => {
             store.r2_key = r2_key;
@@ -16,7 +12,7 @@
             store.serverDeleteUrl = '/api/media/delete';
             return store;
         });
-    })
+    }
 </script>
 
 <main class="space-y-4">
@@ -54,22 +50,19 @@
 	`}/>
     <h2>Inserting Images</h2>
     <h3>The editor primarily uses
-        <a href={routes.modules.file_picker.children.overview} class="note">File Picker</a>
+        <a href={routes.modules.file_picker.children.getting_started} class="note">File Picker</a>
         to handle multiple image uploads and insertions.
-        An input has also been provided to key in image URLs manually.</h3>
-    <h2>File Picker</h2>
-    <h3>The File Picker runs on Cloudflare R2 as a backend storage solution. 
-        Follow <a href={routes.modules.file_picker.children.backend} class="note">this guide</a> to set up your own backend
+        An input has also been provided to key in image URLs manually.
     </h3>
     <RenderCode
 		lang="svelte"
 		code={`
 		<\script>
             import { onMount } from 'svelte';
-            import {Editor, editorStore, User} from '@sierra-95/svelte-scaffold';
+            import {editorStore, User} from '@sierra-95/svelte-scaffold';
             
             let content = {};
-            onMount(()=>{
+            $: if($User.userId){
                 const r2_key = \`svelte-scaffold/\${$User.userId}\`;
                 editorStore.update(store => {
                     store.r2_key = r2_key;
@@ -78,7 +71,7 @@
                     store.serverDeleteUrl = '/api/media/delete';
                     return store;
                 });
-            })
+            }
 		<\/script>
 
 	`}/>

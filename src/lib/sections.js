@@ -37,7 +37,8 @@ export const routes = {
         file_picker: {
             base: `${modules}/file-picker`,
             children: {
-                overview: `${modules}/file-picker/overview`,
+                getting_started: `${modules}/file-picker/getting-started`,
+                custom_content: `${modules}/file-picker/custom`,
                 backend: `${modules}/file-picker/backend-integration`,
             }
         },
@@ -123,8 +124,12 @@ export const sections = [
                 icon: 'fa fa-cloud-upload' ,
                 children: [
                     {
-                        label: 'Overview',
-                        path: routes.modules.file_picker.children.overview,
+                        label: 'Getting Started',
+                        path: routes.modules.file_picker.children.getting_started,
+                    },
+                    {
+                        label: 'Customize',
+                        path: routes.modules.file_picker.children.custom_content,
                     },
                     {
                         label: 'Backend Integration',

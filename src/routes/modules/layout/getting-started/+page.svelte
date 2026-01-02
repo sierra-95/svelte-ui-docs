@@ -9,7 +9,6 @@
     <ol class="list-decimal list-inside space-y-2">
         <li>Labels are used to classify routes that fall under a category. Leave empty if a route is independent</li>
         <li>A <strong>hr</strong> is automatically added after category name if label is included.</li>
-        <li>The prefered icons are from <a href="https://fontawesome.com/v4/" target="_blank" class="note">https://fontawesome.com/</a> as they work well with <a href={routes.stores.theme_stores} class="underline note">Themes</a>.</li>
     </ol>
     <RenderCode
         lang="javascript"
@@ -66,5 +65,4 @@
         </Layout>
 
     `}/>
-    <h3>And thats it!</h3>
 </main>

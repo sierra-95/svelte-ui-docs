@@ -22,6 +22,6 @@
     <ul class="list-disc list-inside space-y-2">
         <li><a href={routes.core.children.alerts.modal} class="note">Modal</a></li>
         <li><a href={routes.core.children.alerts.toast} class="note">Toast</a></li>
-        <li><a href={routes.modules.file_picker.children.overview} class="note">File Picker</a></li>
+        <li><a href={routes.modules.file_picker.children.getting_started} class="note">File Picker</a></li>
     </ul>
 </main>

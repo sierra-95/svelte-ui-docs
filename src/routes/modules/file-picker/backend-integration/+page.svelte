@@ -6,7 +6,7 @@
 	<title>Backend Integration</title>
 	<h1>Backend Integration</h1>
     <h2>GET method</h2>
-    <h3>When file picker mounts, it loads files using <code>$fileInputStore.serverGetUrl</code> endpoint.</h3>
+    <h3>The <code>$fileInputStore.serverGetUrl</code> endpoint is used to load files <code>onMount</code>.</h3>
     <RenderCode
         lang="javascript"
         code={
@@ -62,7 +62,7 @@
             });
 	`}/>
     <h2>DELETE method</h2>
-    <h3>When a user selects files and $fileInputStore.manage is true, a delete button appears allowing them to remove files from the cloud via the <code>$fileInputStore.serverDeleteUrl</code> endpoint.</h3>
+    <h3>The $fileInputStore.serverDeleteUrl endpoint is used to delete files from your cloud</h3>
     <RenderCode
         lang="javascript"
         code={

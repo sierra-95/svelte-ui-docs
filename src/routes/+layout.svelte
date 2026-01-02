@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../app.css';
-	import {Layout, ButtonTheme, theme} from '@sierra-95/svelte-scaffold';
+	import { onMount } from 'svelte';
+	import {Layout, ButtonTheme, theme, isLoggedIn, User} from '@sierra-95/svelte-scaffold';
 	import {sections} from '$lib';
 
 	let { children } = $props();
@@ -12,6 +13,11 @@
 			link = 'https://files.michaelmachohi.com/logos/michaelmachohi.light.blue.png';
 		}
 	});
+
+	onMount(()=>{
+        isLoggedIn.set(true);
+        User.update(user => ({ ...user, userId: 'f47ac10b-58cc-4372-a567-0e02b2c3d479' }) );
+    })
 </script>
 
 <svelte:head>
