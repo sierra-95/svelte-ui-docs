@@ -26,8 +26,8 @@
 	{#each outlined_buttons as { color, title }}
 		<Button variant="outlined" color={color} title={title}>Button</Button>
 	{/each}
-		<Button variant="contained"  isLoading title="Loading">Button</Button>
-		<Button variant='contained' disabled title="Disabled">Button</Button>
+		<Button variant="contained"  isLoading title="Loading" endIcon="fa-trash">Button</Button>
+		<Button variant='contained' disabled title="Disabled" startIcon="fa-cloud-arrow-down">Button</Button>
 		<Button pill variant='outlined' title="Pill"><i class="fa fa-chevron-right"></i></Button>
 	</div>
 	<RenderCode
@@ -37,8 +37,11 @@
 			import { Button } from '@sierra-95/svelte-scaffold';
 		<\/script>
 
-		<Button onclick={() => alert('Button clicked!')}>
-			Click Me
+		<Button
+			title="Download"
+			startIcon="fa-cloud-arrow-down"
+			onclick={() => alert('Download Started!')}
+		>Download
 		</Button>
 		
 	`}/>

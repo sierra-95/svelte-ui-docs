@@ -39,6 +39,30 @@
       <td class="p-3 border">Defines the button style variant. If used, it <strong>overrides</strong> any Tailwind styles passed via the <strong>style</strong> prop.</td>
     </tr>
     <tr>
+      <td class="p-3 border font-mono">style</td>
+      <td class="p-3 border font-mono">string (Tailwind only)</td>
+      <td class="p-3 border font-mono">""</td>
+      <td class="p-3 border">Tailwind utility classes for custom styling. <strong>Priority</strong> is given to <strong>variant</strong></td>
+    </tr>
+    <tr>
+      <td class="p-3 border font-mono">startIcon & endIcon</td>
+      <td class="p-3 border font-mono">string (Font Awesome only)</td>
+      <td class="p-3 border font-mono">""</td>
+      <td class="p-3 border"></td>
+    </tr>
+    <tr>
+      <td class="p-3 border font-mono">disabled</td>
+      <td class="p-3 border font-mono">boolean</td>
+      <td class="p-3 border font-mono">false</td>
+      <td class="p-3 border">Disables the button and blocks <strong>onClick</strong> actions.</td>
+    </tr>
+    <tr>
+      <td class="p-3 border font-mono">isLoading</td>
+      <td class="p-3 border font-mono">boolean</td>
+      <td class="p-3 border font-mono">false</td>
+      <td class="p-3 border">Displays a spinner. Automatically disables the button while loading.</td>
+    </tr>
+    <tr>
       <td class="p-3 border font-mono">pill</td>
       <td class="p-3 border font-mono">boolean</td>
       <td class="p-3 border font-mono">false</td>
@@ -55,24 +79,6 @@
         <td class="p-3 border font-mono">number</td>
         <td class="p-3 border font-mono">2</td>
         <td class="p-3 border">Defines the stroke thickness of the spinner icon (applies when <strong>isLoading</strong> is active)</td>
-    </tr>
-    <tr>
-      <td class="p-3 border font-mono">style</td>
-      <td class="p-3 border font-mono">string (Tailwind only)</td>
-      <td class="p-3 border font-mono">""</td>
-      <td class="p-3 border">Tailwind utility classes for custom styling. <strong>Priority</strong> is given to <strong>variant</strong></td>
-    </tr>
-    <tr>
-      <td class="p-3 border font-mono">disabled</td>
-      <td class="p-3 border font-mono">boolean</td>
-      <td class="p-3 border font-mono">false</td>
-      <td class="p-3 border">Disables the button and blocks <strong>onClick</strong> actions.</td>
-    </tr>
-    <tr>
-      <td class="p-3 border font-mono">isLoading</td>
-      <td class="p-3 border font-mono">boolean</td>
-      <td class="p-3 border font-mono">false</td>
-      <td class="p-3 border">Displays a spinner. Automatically disables the button while loading.</td>
     </tr>
     <tr>
       <td class="p-3 border font-mono">html2canvas_ignore</td>

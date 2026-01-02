@@ -1,13 +1,17 @@
 <script lang="ts">
-	import {CircularProgress, LinearProgress} from '@sierra-95/svelte-scaffold';
+	import {CircularProgress, LinearProgress, CustomProgress} from '@sierra-95/svelte-scaffold';
 	import {RenderCode} from '$lib';
 </script>
 
 <main class="space-y-4">
 	<title>Progress</title>
 	<h1>Progress</h1>
-	<h2 class="font-bold text-2xl">Circular Progress</h2>
-	<CircularProgress/>
+	<h2>Circular Progress</h2>
+	<div class="flex flex-wrap gap-5">
+		<CircularProgress thickness={2} size={40}/>
+		<CircularProgress size={45} color="var(--warning-bg)"/>
+		<CircularProgress color="var(--error-bg)"/>
+	</div>
 	<RenderCode
 		lang="svelte"
 		code={`
@@ -15,19 +19,31 @@
 			import { CircularProgress } from '@sierra-95/svelte-scaffold';
 		<\/script>
 
-		<CircularProgress />
+		<CircularProgress size={45} color="var(--warning-bg)"/>
 
 	`}/>
-	<h2 class="font-bold text-2xl">Linear Progress</h2>
+	<h2>Linear Progress</h2>
 	<LinearProgress/>
+	<LinearProgress color="var(--warning-bg)"/>
+	<LinearProgress color="var(--error-bg)"/>
 	<RenderCode
 		lang="svelte"
 		code={`
 		<\script>
 			import { LinearProgress } from '@sierra-95/svelte-scaffold';
 		<\/script>
-
-		<LinearProgress />
-		
+		<LinearProgress color="var(--error-bg)"/>
+	`}/>
+	<h2>Custom Progress</h2>
+	<CustomProgress value={30}/>
+	<CustomProgress value={60} color="var(--warning-bg)"/>
+	<CustomProgress value={90} color="var(--error-bg)"/>
+	<RenderCode
+		lang="svelte"
+		code={`
+		<\script>
+			import { CustomProgress } from '@sierra-95/svelte-scaffold';
+		<\/script>
+		<CustomProgress value={60} height="7px" color="var(--warning-bg)"/>
 	`}/>
 </main>
