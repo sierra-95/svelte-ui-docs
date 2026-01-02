@@ -23,7 +23,6 @@
 				if ($isMobile) isMenuOpen = false;
 			});
 		<\/script>
-
 	`}/>
 	<h2>isLoading</h2>
 	<Button onclick={toggleLoading}>Click here</Button>
@@ -41,9 +40,7 @@
 		{#if $isLoading}
 			<LinearProgress />
 		{/if}
-
 		<Button onclick={toggleLoading}>Click here</Button>
-
 	`}/>
 	<h2>isLoggedIn</h2>
 	<RenderCode
@@ -60,6 +57,5 @@
 		{#if $isLoggedIn}
 			<p>Welcome back!</p>
 		{/if}
-
 	`}/>
 </main>

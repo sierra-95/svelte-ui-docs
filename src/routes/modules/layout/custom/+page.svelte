@@ -10,22 +10,26 @@
         lang="svelte"
         code={`
         <\script>
-            import {Layout, ButtonTheme} from '@sierra-95/svelte-scaffold'
+            import {Layout, ButtonTheme, SearchBar} from '@sierra-95/svelte-scaffold'
             import {sections} from './sections.js';
 
             let { children } = $props();
         <\/script>
+
+        {#snippet headerCenterContent()}
+            <SearchBar/>
+        {/snippet}
+
+        {#snippet headerRightContent()}
+            <div class="mr-4"><ButtonTheme /></div>
+        {/snippet}
+
         <Layout 
-            headerTitle = 'Brand Name'
             {sections}
             contentCenter
-        >
-            {#snippet headerContent()}
-                <div class=" mr-4">
-                    <ButtonTheme />
-                </div>
-            {/snippet}
-            {@render children()} 
+            headerCenterContent = {headerCenterContent}
+            headerRightContent = {headerRightContent}
+        >{@render children()} 
         </Layout>
 
     `}/>

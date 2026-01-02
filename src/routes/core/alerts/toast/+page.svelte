@@ -33,7 +33,6 @@
         <\/script>
 
         <Toast />
-
     `}/>
     <h2>Timed message toast</h2>
     <h3>Default timeout is <strong>6 seconds</strong></h3>
