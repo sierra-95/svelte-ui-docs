@@ -14,7 +14,6 @@ export const sections: Section[] = [
 				label: 'Overview',
 				path: routes.overview.path,
 				icon: 'fa-solid fa-magnifying-glass',
-				role: 'user',
 			},
 			{
 				label: 'Installation',

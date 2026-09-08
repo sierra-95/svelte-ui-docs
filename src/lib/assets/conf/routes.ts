@@ -203,7 +203,7 @@ export const routes = {
                 toc: 'toc',
                 global_search: 'global-search',
                 navigator: 'navigator',
-                rbac: 'rbac',
+                access_control: 'access-control',
               }
             } as basicPage,
           }
@@ -219,7 +219,6 @@ export const routes = {
       device_width: 'device-width',
       isLoading: 'is-loading',
       isLoggedIn: 'is-logged-in',
-      user_store: 'user-store',
       theme_store: 'theme-store',
     }
   } as basicPage,

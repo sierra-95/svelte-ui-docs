@@ -56,7 +56,7 @@
                 {#snippet TOCContent()}
                     <div style="margin-top: 1rem">
                         <h3>Guest Id:
-                            <em class="text-sm text-(--ss-success)">{$fileInputConfig.user_id}</em>
+                            <em class="text-sm text-(--ss-success)">some_random_uuid</em>
                         </h3>
                     </div>
                 {/snippet}
@@ -65,7 +65,7 @@
 
         <section id={routes.modules.layout.children.features.children.global.ids.global_search} data-title="Global Search" class="space-y-4">
             <li>Global Search</li>
-            <h3>Global search allows users to quickly search across the entire application, making it easy to find content without navigating through multiple pages or sections. It can be accessed from anywhere in the app and respects configured RBAC rules.</h3>
+            <h3>Global search allows users to quickly search across the entire application, making it easy to find content without navigating through multiple pages or sections. It can be accessed from anywhere in the app and respects access control.</h3>
             <h3>Press <code>ctrl + K</code>, or click the search bar on the header to get the interface.</h3>
             <h3>For Global Search to work, you need to define a <strong>routes</strong> file. Global Search reads from both the sections and routes files to build and populate its search results.</h3>
             <RenderCode
@@ -121,14 +121,15 @@
             `}/>
         </section>
 
-        <section id={routes.modules.layout.children.features.children.global.ids.rbac} data-title="Role-Based Access Control (RBAC)" class="space-y-4 mb-10">
-            <li>RBAC</li>
+        <section id={routes.modules.layout.children.features.children.global.ids.access_control} data-title="Access Control" class="space-y-4 mb-10">
+            <li>Access Control</li>
 
-            <h3>The layout supports role-based access control (RBAC) to restrict menu items, Navigator and Global Search based on user roles. Please note that it doesn't prevent the user from manually typing forbidden routes in the URL, so it's recommended to implement additional routes security measures in your application.</h3>
+            <h3>The layout supports access control to restrict menu items, Navigator and Global Search based on a user's access configuration. Please note that it doesn't prevent the user from manually typing forbidden routes in the URL, so it's recommended to implement additional routes security measures in your application.</h3>
+            <h3>Access can be configured using a minimum access level (min), specific access values (only), or both, allowing the system to handle dynamic access control requirements and different permission scenarios.</h3> 
             <ul>
-                <li>Define your application's <code>ROLE_LEVELS</code>. Role levels are incremental, with higher levels having more permissions.
+                <li>Define your application's <code>accessLevels</code>. Access levels are incremental, with higher levels having greater access.
                 </li>
-                <li>Assign roles to users within your application's authentication system.
+                <li>Assign the current user's <code>access</code> configuration within your application's authentication system.
                 </li>
             </ul>
             <RenderCode
@@ -140,23 +141,24 @@
                 
                     onMount(()=>{
                         layoutStore.update(store => {
-                            store.userRole = 'driver';
-                            store.ROLE_LEVELS={
+                            store.access = {
+                                min: 'driver'
+                            };
+                            store.accessLevels = {
                                 user: 1,
                                 driver: 2,
                                 admin: 3,
                                 superadmin: 4
-                            }
+                            };
                             return store;
                         });
                     })
                 <\/script>
             `}/>
             <ul>
-                <li>The sections file allows you to specify which categories of paths can be accessed by users with specific roles.
-                </li>
+                <li>The sections file allows you to specify the minimum access level or specific access values required to access a menu item.</li>
             </ul>
-                <RenderCode
+            <RenderCode
                 lang="typescript"
                 code={`
                 import type {Section} from '@sierra-95/svelte-scaffold';
@@ -169,13 +171,31 @@
                                 label: 'Overview',
                                 path: '/overview',
                                 icon: 'fa-solid fa-magnifying-glass',
-                                role: 'admin', // only admins (3) and above can access this route
+                                access: {
+                                    min: 'admin', // only admins (3) and above can access this route
+                                },
                             },
                         ],
                     },
                 ]
                 `}
             />
+
+            <ul> 
+                <li>Use <code>only</code> to allow access only to users with one or more specific access values, without using the access level hierarchy. </li> 
+            </ul> 
+            <RenderCode 
+                lang="typescript" 
+                code={` 
+                    { 
+                        label: 'Reports', 
+                        path: '/reports', 
+                        icon: 'fa-solid fa-chart-line', 
+                        access: { 
+                            only: ['admin', 'superadmin'], 
+                        }, 
+                    } 
+            `}/>
         </section>
     </ol>
 </main>

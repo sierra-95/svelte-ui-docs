@@ -16,11 +16,15 @@
             <li>Why Use the Layout?</li>
             <ul class="list-disc list-inside space-y-2">
                 <li>Prebuilt responsive layout with header, side menu, and content area.</li>
-                <li>In-built theme support for light and dark modes.</li>
-                <li>In-built Global Search for route search and navigation.</li>
-                <li>In-built Navigator that maps previous and next pages.</li>
-                <li>In-built TOC (Table of Contents) for easy navigation within pages.</li>
-                <li>Supports RBAC (Role-Based Access Control)</li>
+                <li>In-built 
+                    <ul class="list-disc list-inside space-y-2 ml-5">
+                        <li>Theme support for light and dark modes.</li>
+                        <li>Global Search for route search and navigation.</li>
+                        <li>Navigator that maps previous and next pages.</li>
+                        <li>TOC (Table of Contents) for easy navigation within pages.</li>
+                        <li>Dynamic Access control</li>
+                    </ul>
+                </li>
                 <li>
                     It includes certain components by default, hence you don’t need to import them manually.
                     <ul class="list-disc list-inside space-y-2 ml-5">
